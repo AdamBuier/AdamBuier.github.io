@@ -1,0 +1,182 @@
+@import '../node_modules/bootstrap/scss/functions.scss';
+@import '../node_modules/bootstrap/scss/variables.scss';
+@import '../node_modules/bootstrap/scss/mixins.scss';
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+$color-primary: #56ad79;
+$color-secondary: #ffffff;
+$color-background: #23292f;
+
+.fab, .fas{
+    color: $color-primary;
+}
+
+.socials-link {
+    color: $color-secondary; /* Use the current color */
+    cursor: pointer;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.socials-link:hover{
+    color: $color-primary;
+}
+
+.seperator-50px{
+    content: '';
+    margin-top: 50px;
+}
+
+.seperator-25px{
+    content: '';
+    margin-top: 25px;
+}
+
+.seperator-100px{
+    content: '';
+    margin-top: 100px;
+}
+
+.rounded-xl{
+    border-radius: 1rem;
+}
+
+.carousel{
+    padding: 20px 0px;
+}
+
+.carousel-item img {
+    height: 350px; /* Adjust the height of the carousel images */
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the carousel area without distortion */
+}
+
+.carousel-item .col{
+    padding: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: background color for controls */
+    border-radius: 50%; /* Optional: rounded controls */
+}
+
+.nav-container{
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Ensures that the navbar has some space around its contents */
+.navbar {
+    padding: 0; /* Adjust if needed */
+}
+
+/* Style each nav item */
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Space between nav items */
+}
+
+/* Style the nav links */
+.navbar-nav .nav-link {
+    font-size: 1rem; /* Adjust font size for readability */
+    color: $color-secondary;
+    font-weight: 500; /* Slightly bolder text for emphasis */
+    text-transform: uppercase; /* Uppercase text for a professional look */
+    padding: 0.5rem 0; /* Padding for better click area */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Style for nav link hover */
+.navbar-nav .nav-link:hover {
+    color: $color-primary; /* Highlight color on hover, replace with a color if needed */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.project-card{
+    text-decoration: none;
+}
+
+.project-card:hover{
+    cursor: pointer;
+}
+
+.card{
+    border: 2px solid darken($color: $color-primary, $amount: 20);
+    background-color: darken($color: $color-primary, $amount: 20);
+}
+
+.card-body{
+    background-color: #23292f;
+}
+
+.card-title{
+    color: $color-primary;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-subtitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: $color-secondary;
+}   
+
+.title{
+    color: $color-primary;
+    text-decoration: underline;
+    text-decoration-color: $color-secondary;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.title:hover{
+    color: darken($color: $color-primary, $amount: 20)
+}
+
+.section-header{
+    color: $color-primary;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-header-xl{
+    color: $color-primary;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-header-massive{
+    color: $color-primary;
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+body {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: $color-secondary;
+    background-color: $color-background;
+    font-size: larger;
+}
+
+header {
+    background-color: rgba(35,41,47,255);
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; /* Ensure headings use the same font */
+}
