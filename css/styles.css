@@ -11994,6 +11994,12 @@ textarea.form-control-lg {
   font-weight: bold;
   margin-bottom: 10px;
 }
+.section-header-large {
+  color: #56ad79;
+  font-size: 75px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 body {
   padding: 20px;
