@@ -575,6 +575,7 @@ iframe {
   border: 0;
 }
 
+
 summary {
   display: list-item;
   cursor: pointer;
@@ -647,6 +648,20 @@ progress {
     font-size: 3rem;
   }
 }
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
 
 .display-6 {
   font-size: calc(1.375rem + 1.5vw);
