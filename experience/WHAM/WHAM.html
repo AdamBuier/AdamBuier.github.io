@@ -6,125 +6,110 @@
     <title>Adam Buier - Home</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: white;
-        }
-        .menu-toggle {
-            position: fixed;
-            left: 20px;
-            top: 20px;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 1000;
-            color: white;
-        }
-        .sidebar {
-            position: fixed;
-            left: -250px;
-            top: 0;
-            width: 250px;
-            height: 100vh;
-            background: #111;
-            transition: 0.3s;
-            padding-top: 50px;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-        }
-        .sidebar.active {
-            left: 0;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar ul li {
-            padding: 15px;
-            text-align: center;
-        }
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            font-size: 18px;
-        }
-        .sidebar ul li a:hover {
-            background: #575757;
-        }
-        .profile {
-            text-align: center;
-            padding: 20px;
-        }
-        .profile img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
-        main {
-            margin-left: 50px;
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-        }
-        .section-header-massive {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .section-header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </div>
-    <div class="sidebar" id="sidebar">
-        <div class="profile">
-            <img src="../../img/pic1.jpg" alt="Profile Picture">
-            <h2>Adam Buier</h2>
+    <header>
+        <div class="nav-container">
+            <a class="h1 title" href="../../index.html">ADAM BUIER</a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../experience.html">Experience</a></li>
-            <li><a href="../../projects.html">Projects</a></li>
-            <li><a href="../../contact.html">Contact</a></li>
-        </ul>
-    </div>
+    </header>
     <main>
         <section id="content">
-            <div class="section-header-massive">WHAM</div>
-            <p>Engineering Intern<br>May 2024 - Aug 2024</p>
-            <p>The Wisconsin HTS Axisymmetric Mirror (WHAM) is a plasma fusion experiment. It utilizes high-temperature superconducting magnets to create a magnetic mirror and achieve nuclear fusion.</p>
-            <img src="img/WHAM Thumbnail.png" alt="WHAM Experiment">
-            <img src="img/WHAM Team pic.jpg" alt="WHAM Team">
-            <div class="section-header">LabVIEW Motor Controller</div>
-            <p>I developed a LabVIEW interface that communicates with an Arduino to control motors for use in a neutron detection probe.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/I6YSTmFiCnc" allowfullscreen></iframe>
-            <div class="section-header">Circuit Board Design</div>
-            <p>Using KiCad, I designed and hand-soldered custom circuit boards for buffer operational amplifiers, to control a plasma stream.</p>
-            <img src="img/Circuit pic.png" alt="Circuit Board Design">
-            <div class="section-header">Transmission Line Machining</div>
-            <p>I machined, assembled, and installed six 12-foot-long aluminum transmission lines designed to power a high-powered magnet.</p>
-            <img src="img/Transmission Line pic.png" alt="Transmission Line Machining">
+      
+            <div class="container my-5">
+                <div class="row align-items-start">
+                    <div class="col-md-6 fs-5">
+                        <div class="section-header-massive">
+                            WHAM
+                        </div>
+                        <p>
+                            Engineering Intern   <br>
+                            May 2024 - Aug 2024 <br><br>
+The Wisconsin HTS Axisymmetric Mirror (WHAM) is a plasma fusion experiment. It utilizes high-temperature superconducting magnets to create a magnetic mirror and achieve nuclear fusion.                        </p>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                        <img src="img/WHAM Thumbnail.png" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
+                    </div>
+
+                </div>
+
+                <div class="seperator-50px"></div>
+                    <div class="col-12">
+                        <img src="img/WHAM Team pic.jpg" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
+                    </div>
+                
+                <div class="seperator-50px"></div>
+                <div class = "row align-items-start">
+                    <div class="col-md-6 fs-5">
+                        <div class="section-header">
+                            LabVIEW Motor Controller
+                        </div>
+                        <p>
+                           I developed a LabVIEW interface that communicates with an Arduino (circuit board) to control motors for use in a neutron detection probe.
+                        </p>
+                    </div>
+<div class="col-md-6 fs-5">
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/I6YSTmFiCnc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
+                    
+                </div> 
+
+                <div class="seperator-50px"></div>
+
+                <div class = "row align-items-center">
+                    <div class="col-md-6 fs-5 d-flex justify-content-center">
+                        <img src="img/Circuit pic.png" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
+                    </div>
+                    <div class="col-md-6 fs-5">
+                        <div class="section-header">
+                        Circuit Board Design
+                        </div>
+                        <p>
+Using KiCad, I designed and hand-soldered custom circuit boards for buffer operational amplifiers, to control a plasma stream.                        </p>
+                    </div>
+                </div> 
+
+                <div class="seperator-50px"></div>
+
+                <div class = "row align-items-center">
+                    <div class="col-md-6 fs-5">
+                        <div class="section-header">
+                            Transmission Line Machining
+                        </div>
+                        <p>
+I machined, assembled, and installed six 12-foot-long aluminum transmission lines designed to power a high-powered magnet.
+                        </p>
+                    </div>
+                    <div class="col-md-6 fs-5">
+                        <img src="img/Transmission Line pic.png" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
+                    </div>
+
+                    <div class="seperator-50px"></div>
+
+                </div> 
+                    
+                </div> 
+
+            </div>
         </section>
     </main>
-    <script>
-        function toggleMenu() {
-            document.getElementById('sidebar').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
