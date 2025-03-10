@@ -119,11 +119,11 @@
         .main-content {
             flex: 1;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         
         .hero {
-            height: 100vh;
+            height: 50vh;
             width: 100%;
             background-image: url('path-to-your-background-image.jpg');
             background-size: cover;
@@ -164,8 +164,127 @@
             }
         }
         
+        /* Portfolio section */
+        .portfolio-section {
+            padding: 60px;
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: #0c141e;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+        }
+        
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .portfolio-filters li {
+            padding: 8px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-filters li.filter-active {
+            background-color: #0c141e;
+            color: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            height: 250px;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            background: rgba(12, 20, 30, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+            color: white;
+            text-align: center;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-item:hover .portfolio-info {
+            opacity: 1;
+        }
+        
+        .portfolio-info h4 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-info p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-link {
+            display: inline-block;
+            background: white;
+            color: #0c141e;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            background: #0c141e;
+            color: white;
+        }
+        
         /* Social icons */  
-        .fa-email {
+        .fa-envelope {
             color: white;
         }
         
@@ -182,10 +301,10 @@
         </div>
         <h1 class="name">Adam Buier</h1>
         <div class="social-icons">
-            <a href="#" class="social-icon">
-                <i class="fab fa-email"></i>
+            <a href="mailto:contact@adambuier.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
             </a>
-            <a href="#" class="social-icon">
+            <a href="https://www.linkedin.com/in/adambuier" class="social-icon">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
@@ -220,103 +339,140 @@
         <div class="hero">
             <div class="hero-text">
                 <h1 class="hero-title">Adam Buier</h1>
+                <p class="hero-subtitle">Robotics Engineer</p>
             </div>
         </div>
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-            <ul class="portfolio-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-product">Product</li>
-                <li data-filter=".filter-branding">Branding</li>
-                <li data-filter=".filter-books">Books</li>
-            </ul><!-- End Portfolio Filters -->
         
-            <div class="row gy-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1488.6px;">
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" style="position: absolute; left: 0px; top: 0px;">
-                    <div class="portfolio-content h-100">
-                        <img src="projects/chippy/img/Chippy Thumbnail.png" class="img-fluid" alt="Chippy">
-                        <div class="portfolio-info">
-                            <h4>Chippy</h4>
-                            <p>Beetleweight Combat Robot</p>
-                            <a href="projects/project1.html" title="Chippy" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
+        <section class="portfolio-section">
+            <h2 class="section-title">My Projects</h2>
+            
+            <ul class="portfolio-filters">
+                <li class="filter-active" data-filter="*">All</li>
+                <li data-filter=".robotics">Robotics</li>
+                <li data-filter=".electronics">Electronics</li>
+                <li data-filter=".academic">Academic</li>
+                <li data-filter=".wham">WHAM</li>
+            </ul>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item robotics">
+                    <img src="projects/chippy/img/Chippy Thumbnail.png" alt="Chippy">
+                    <div class="portfolio-info">
+                        <h4>Chippy</h4>
+                        <p>Beetleweight Combat Robot</p>
+                        <a href="projects/project1.html" class="portfolio-link">
+                            <i class="fas fa-link"></i>
+                        </a>
                     </div>
-                </div><!-- End Portfolio Item -->
-        
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" style="position: absolute; left: 360px; top: 0px;">
-                    <div class="portfolio-content h-100">
-                        <img src="projects/Walker/img/Walker Thumbnail.png" class="img-fluid" alt="Walker Robot">
-                        <div class="portfolio-info">
-                            <h4>Walker Robot</h4>
-                            <p>RBE 2002 Side Project</p>
-                            <a href="projects/project2.html" title="Walker Robot" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
+                </div>
+                
+                <div class="portfolio-item robotics academic">
+                    <img src="projects/Walker/img/Walker Thumbnail.png" alt="Walker Robot">
+                    <div class="portfolio-info">
+                        <h4>Walker Robot</h4>
+                        <p>RBE 2002 Side Project</p>
+                        <a href="projects/project2.html" class="portfolio-link">
+                            <i class="fas fa-link"></i>
+                        </a>
                     </div>
-                </div><!-- End Portfolio Item -->
-        
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding" style="position: absolute; left: 0px; top: 248.1px;">
-                    <div class="portfolio-content h-100">
-                        <img src="projects/Trash Collector/img/Trash Thumbnail.png" class="img-fluid" alt="Project 3">
-                        <div class="portfolio-info">
-                            <h4>Trash Collector</h4>
-                            <p>RBE 2002 Project</p>
-                            <a href="projects/project3.html" title="Project 3" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
+                </div>
+                
+                <div class="portfolio-item robotics academic">
+                    <img src="projects/Trash Collector/img/Trash Thumbnail.png" alt="Trash Collector">
+                    <div class="portfolio-info">
+                        <h4>Trash Collector</h4>
+                        <p>RBE 2002 Project</p>
+                        <a href="projects/project3.html" class="portfolio-link">
+                            <i class="fas fa-link"></i>
+                        </a>
                     </div>
-                </div><!-- End Portfolio Item -->
-        
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books" style="position: absolute; left: 360px; top: 248.1px;">
-                    <div class="portfolio-content h-100">
-                        <img src="projects/1001_bot/img/1001 bot thumbnail.png" class="img-fluid" alt="Project 4">
-                        <div class="portfolio-info">
-                            <h4>Autonomous Launcher</h4>
-                            <p>RBE 1001 Project</p>
-                            <a href="projects/project4.html" title="Project 4" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
+                </div>
+                
+                <div class="portfolio-item robotics academic">
+                    <img src="projects/1001_bot/img/1001 bot thumbnail.png" alt="Autonomous Launcher">
+                    <div class="portfolio-info">
+                        <h4>Autonomous Launcher</h4>
+                        <p>RBE 1001 Project</p>
+                        <a href="projects/project4.html" class="portfolio-link">
+                            <i class="fas fa-link"></i>
+                        </a>
                     </div>
-                </div><!-- End Portfolio Item -->
-        
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" style="position: absolute; left: 0px; top: 496.2px;">
-                    <div class="portfolio-content h-100">
-                        <img src="experience/WHAM/img/Labview pic.png" class="img-fluid" alt="Project 5">
-                        <div class="portfolio-info">
-                            <h4>High Magnetic Motor Controller</h4>
-                            <p>WHAM</p>
-                            <a href="projects/project5.html" title="Project 5" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
+                </div>
+                
+                <div class="portfolio-item electronics wham">
+                    <img src="experience/WHAM/img/Labview pic.png" alt="High Magnetic Motor Controller">
+                    <div class="portfolio-info">
+                        <h4>High Magnetic Motor Controller</h4>
+                        <p>WHAM</p>
+                        <a href="projects/project5.html" class="portfolio-link">
+                            <i class="fas fa-link"></i>
+                        </a>
                     </div>
-                </div><!-- End Portfolio Item -->
-        
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product" style="position: absolute; left: 360px; top: 496.2px;">
-                    <div class="portfolio-content h-100">
-                        <img src="experience/WHAM/img/Circuit pic.png" class="img-fluid" alt="Project 6">
-                        <div class="portfolio-info">
-                            <h4>Custom Circuit Board</h4>
-                            <p>WHAM</p>
-                            <a href="projects/project6.html" title="Project 6" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
+                </div>
+                
+                <div class="portfolio-item electronics wham">
+                    <img src="experience/WHAM/img/Circuit pic.png" alt="Custom Circuit Board">
+                    <div class="portfolio-info">
+                        <h4>Custom Circuit Board</h4>
+                        <p>WHAM</p>
+                        <a href="projects/project6.html" class="portfolio-link">
+                            <i class="fas fa-link"></i>
+                        </a>
                     </div>
-                </div><!-- End Portfolio Item -->
-        
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding" style="position: absolute; left: 0px; top: 744.3px;">
-                    <div class="portfolio-content h-100">
-                        <img src="experience/WHAM/img/Transmission Line pic.png" class="img-fluid" alt="Project 7">
-                        <div class="portfolio-info">
-                            <h4>High Current Transmission Lines</h4>
-                            <p>WHAM</p>
-                            <a href="projects/project7.html" title="Project 7" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
+                </div>
+                
+                <div class="portfolio-item electronics wham">
+                    <img src="experience/WHAM/img/Transmission Line pic.png" alt="High Current Transmission Lines">
+                    <div class="portfolio-info">
+                        <h4>High Current Transmission Lines</h4>
+                        <p>WHAM</p>
+                        <a href="projects/project7.html" class="portfolio-link">
+                            <i class="fas fa-link"></i>
+                        </a>
                     </div>
-                </div><!-- End Portfolio Item -->
-        
-            </div><!-- End Portfolio Container -->
-        </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script>
-        // You can add JavaScript here if needed
         document.addEventListener('DOMContentLoaded', function() {
-            // Any initialization code
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.portfolio-filters li');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('filter-active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide items based on filter
+                    portfolioItems.forEach(item => {
+                        if (filterValue === '*') {
+                            item.style.display = 'block';
+                        } else if (item.classList.contains(filterValue.substring(1))) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Make entire portfolio item clickable
+            portfolioItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const link = this.querySelector('.portfolio-link');
+                    if (link) {
+                        window.location.href = link.getAttribute('href');
+                    }
+                });
+            });
         });
     </script>
 </body>
