@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Buier - Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -198,6 +199,7 @@
             height: 10px;
             background-color: #ddd;
             border-radius: 50%;
+            cursor: pointer;
         }
         
         .page-dot.active {
@@ -247,7 +249,9 @@
     <div class="main-content">
         <div class="content-section">
             <div class="project-image">
-                <img src="projects/chippy/img/IMG_7442.JPG" alt="Project Image">
+                <img src="../../projects/chippy/img/IMG_7442.JPG" alt="Project Image" class="carousel-image">
+                <img src="../../projects/chippy/img/IMG_9882.jpg" alt="Project Image" class="carousel-image" style="display:none;">
+                <img src="../../projects/chippy/img/Chippy Side View.png" alt="Project Image" class="carousel-image" style="display:none;">
             </div>
             <div class="project-info">
                 <div class="project-card">
@@ -281,10 +285,9 @@
         </div>
         
         <div class="pagination">
-            <div class="page-dot"></div>
-            <div class="page-dot"></div>
-            <div class="page-dot"></div>
-            <div class="page-dot active"></div>
+            <div class="page-dot active" data-index="0"></div>
+            <div class="page-dot" data-index="1"></div>
+            <div class="page-dot" data-index="2"></div>
         </div>
     </div>
 
@@ -301,6 +304,21 @@
                         top: targetElement.offsetTop,
                         behavior: 'smooth'
                     });
+                });
+            });
+
+            // Carousel functionality
+            const images = document.querySelectorAll('.carousel-image');
+            const dots = document.querySelectorAll('.page-dot');
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    images.forEach((img, i) => {
+                        img.style.display = i == index ? 'block' : 'none';
+                    });
+                    dots.forEach(d => d.classList.remove('active'));
+                    this.classList.add('active');
                 });
             });
         });
