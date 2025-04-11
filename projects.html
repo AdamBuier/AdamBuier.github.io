@@ -1,99 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Adam Buier</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Layout</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <a href="index.html" class="logo">Adam Buier</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-100 font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md flex flex-col">
+      <div class="p-6 font-bold text-xl border-b">Logo</div>
+      <nav class="flex-1 p-4 space-y-2">
+        <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+          <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+        </a>
+        <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+          <i class="fas fa-chart-line"></i><span>Analytics</span>
+        </a>
+        <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
+          <i class="fas fa-cog"></i><span>Settings</span>
+        </a>
+      </nav>
+    </aside>
 
-    <div class="container">
-        <h1>Projects</h1>
-        
-        <div class="sidebar">
-            <div class="sidebar-section">
-                <h2>Project Page Quick Access</h2>
-                <ul>
-                    <li><a href="#robots">Robots</a></li>
-                    <li><a href="#heading">Heading</a></li>
-                    <li><a href="#next-heading">Next Heading</a></li>
-                    <li><a href="#next2-heading">Next2 Heading</a></li>
-                </ul>
-            </div>
-            
-            <div class="sidebar-section">
-                <h2>Active Projects</h2>
-                <ul>
-                    <li><a href="projects\chippy\chippy.html">Chippy</a></li>
-                    <li><a href="project-saiko.html">Saiko!</a></li>
-                    <li><a href="project-sawblaze.html">SawBlaze</a></li>
-                    <li><a href="project-silentspring.html">Silent Spring</a></li>
-                </ul>
-            </div>
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+      <!-- Top Navbar -->
+      <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-semibold">Dashboard</h1>
+        <div class="space-x-4">
+          <button class="text-gray-600 hover:text-blue-600"><i class="fas fa-bell"></i></button>
+          <button class="text-gray-600 hover:text-blue-600"><i class="fas fa-user-circle"></i></button>
         </div>
-        
-        <div class="main-content">
-            <section id="robots">
-                <h2>Robots</h2>
-                <div class="project-grid">
-                    <a href="projects\chippy\chippy.html" class="project-card">
-                        <img src="projects\chippy\img\ChippyV3Pic.jpg" alt="Chippy">
-                        <div class="content">
-                            <h3>Chippy</h3>
-                        </div>
-                    </a>
-                    <a href="project-saiko.html" class="project-card">
-                        <img src="images/saiko.jpg" alt="Saiko!">
-                        <div class="content">
-                            <h3>Saiko!</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            
-            <section id="heading">
-                <h2>Heading</h2>
-                <div class="project-grid">
-                    <a href="project-megatron.html" class="project-card">
-                        <img src="images/megatron.jpg" alt="MegatRON">
-                        <div class="content">
-                            <h3>MegatRON</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            
-            <section id="next-heading">
-                <h2>Next Heading</h2>
-                <div class="project-grid">
-                    <a href="project-sawblaze.html" class="project-card">
-                        <img src="images/sawblaze.jpg" alt="SawBlaze">
-                        <div class="content">
-                            <h3>SawBlaze</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
+      </header>
+
+      <!-- Page Content -->
+      <main class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-4 shadow rounded-lg">Card 1</div>
+          <div class="bg-white p-4 shadow rounded-lg">Card 2</div>
+          <div class="bg-white p-4 shadow rounded-lg">Card 3</div>
         </div>
+      </main>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Jamison Go. All rights reserved.</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+  </div>
 </body>
 </html>
