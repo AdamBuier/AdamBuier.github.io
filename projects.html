@@ -1,50 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Layout</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Adam Buier</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 font-sans">
-  <div class="flex h-screen">
-    <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow-md flex flex-col">
-      <div class="p-6 font-bold text-xl border-b">Logo</div>
-      <nav class="flex-1 p-4 space-y-2">
-        <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
-          <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
-        </a>
-        <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
-          <i class="fas fa-chart-line"></i><span>Analytics</span>
-        </a>
-        <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600">
-          <i class="fas fa-cog"></i><span>Settings</span>
-        </a>
-      </nav>
-    </aside>
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold">Jamison Go</a>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                <li><a href="projects.html" class="text-gray-700 hover:text-blue-600">Projects</a></li>
+                <li><a href="blog.html" class="text-gray-700 hover:text-blue-600">Blog</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-blue-600">About</a></li>
+                <li><a href="resume.html" class="text-gray-700 hover:text-blue-600">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Main Content -->
-    <div class="flex-1 flex flex-col">
-      <!-- Top Navbar -->
-      <header class="bg-white shadow-md p-4 flex justify-between items-center">
-        <h1 class="text-2xl font-semibold">Dashboard</h1>
-        <div class="space-x-4">
-          <button class="text-gray-600 hover:text-blue-600"><i class="fas fa-bell"></i></button>
-          <button class="text-gray-600 hover:text-blue-600"><i class="fas fa-user-circle"></i></button>
-        </div>
-      </header>
+    <div class="container mx-auto p-6 flex">
+        <!-- Sidebar -->
+        <aside class="w-1/4 bg-white shadow-md rounded-lg p-4">
+            <div class="mb-6">
+                <h2 class="text-lg font-bold border-b pb-2 mb-4">Project Page Quick Access</h2>
+                <ul class="space-y-2">
+                    <li><a href="#robots" class="text-blue-600 hover:underline">Robots</a></li>
+                    <li><a href="#heading" class="text-blue-600 hover:underline">Heading</a></li>
+                    <li><a href="#next-heading" class="text-blue-600 hover:underline">Next Heading</a></li>
+                    <li><a href="#next2-heading" class="text-blue-600 hover:underline">Next2 Heading</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-lg font-bold border-b pb-2 mb-4">Active Projects</h2>
+                <ul class="space-y-2">
+                    <li><a href="projects/chippy/chippy.html" class="text-blue-600 hover:underline">Chippy</a></li>
+                    <li><a href="project-saiko.html" class="text-blue-600 hover:underline">Saiko!</a></li>
+                    <li><a href="project-sawblaze.html" class="text-blue-600 hover:underline">SawBlaze</a></li>
+                    <li><a href="project-silentspring.html" class="text-blue-600 hover:underline">Silent Spring</a></li>
+                </ul>
+            </div>
+        </aside>
 
-      <!-- Page Content -->
-      <main class="p-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white p-4 shadow rounded-lg">Card 1</div>
-          <div class="bg-white p-4 shadow rounded-lg">Card 2</div>
-          <div class="bg-white p-4 shadow rounded-lg">Card 3</div>
-        </div>
-      </main>
+        <!-- Projects Section -->
+        <main class="w-3/4 pl-6">
+            <h1 class="text-3xl font-bold mb-6">Projects</h1>
+
+            <!-- Robots Section -->
+            <section id="robots" class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">Robots</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="projects/chippy/chippy.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition">
+                        <img src="projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold">Chippy</h3>
+                        </div>
+                    </a>
+                    <a href="project-saiko.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition">
+                        <img src="images/saiko.jpg" alt="Saiko!" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold">Saiko!</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Heading Section -->
+            <section id="heading" class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">Heading</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="project-megatron.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition">
+                        <img src="images/megatron.jpg" alt="MegatRON" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold">MegatRON</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Next Heading Section -->
+            <section id="next-heading" class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">Next Heading</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="project-sawblaze.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition">
+                        <img src="images/sawblaze.jpg" alt="SawBlaze" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold">SawBlaze</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
     </div>
-  </div>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md p-4 text-center">
+        <p>&copy; 2025 Jamison Go. All rights reserved.</p>
+    </footer>
 </body>
 </html>
