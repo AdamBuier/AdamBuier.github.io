@@ -605,6 +605,24 @@ footer {
   cursor: pointer;
 }
 
+.project-card img {
+  border-radius: 20px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.project-card {
+  height: 400px; /* Increase the height of the widgets */
+}
+
+.project-card img {
+  height: 70%; /* Adjust the image height relative to the card */
+}
+
+.project-card .p-4 {
+  height: 30%; /* Adjust the text container height */
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .container {
