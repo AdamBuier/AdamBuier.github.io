@@ -4,46 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Adam Buier</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your provided CSS file -->
+
 </head>
 <body>
+    <!-- Header -->
     <header>
         <a href="index.html" class="logo">Adam Buier</a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <h1>Blog</h1>
-        
-        <div class="blog-filters">
-            <h3>Filter by Project:</h3>
+    <!-- Blog Content -->
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Latest Blog Posts</h1>
             <div class="filter-options">
-                <button class="filter-btn" data-filter="silent-spring">Chippy</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="robots">Chippy</button>
+                <button class="filter-btn" data-filter="projects">Projects</button>
+                <button class="filter-btn" data-filter="guides">Guides</button>
             </div>
         </div>
-        
+
         <div class="blog-grid">
-            <div class="blog-card" data-project="silent-spring">
-                <img src="images/blog-silent-spring.jpg" alt="Silent Spring Update">
+            <!-- Newest Blog Post -->
+            <div class="blog-card blog-main" data-category="robots">
+                <img src="blog\April_NHRL_2025\img\AprilNHRLThumbnail.png" alt="April NHRL">
                 <div class="content">
-                    <span class="date">April 11, 2025</span>
-                    <h3>Chippy: April NHRL Recap</h3>
-                    <p>Our journey at the National Robotics Championship and how we overcame unexpected challenges.</p>
-                    <p><strong>Project:</strong> Chippy</p>
+                    <h3>Chippy V3 NHRL April 2025</h3>
+                    <p>The gaming world has been ablaze with anticipation...</p>
                 </div>
             </div>
+
+            <!-- Other Blog Posts -->
+            <div class="blog-card" data-category="projects">
+                <img src="images/slowburn.jpg" alt="Slow Burn">
+                <div class="content">
+                    <h3>Slow Burn: A Dive into the Open-World RPG's Vivid Universe</h3>
+                    <p>Explore the intricate details of the Slow Burn universe...</p>
+                    <p class="author">Joan Smith</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="guides">
+                <img src="images/secretboss.jpg" alt="Secret Boss">
+                <div class="content">
+                    <h3>How to Defeat the Secret Boss in Fountain</h3>
+                    <p>Master the techniques to overcome the toughest challenge...</p>
+                    <p class="author">Joan Smith</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="robots">
+                <img src="images/tigersden.jpg" alt="Tiger's Den">
+                <div class="content">
+                    <h3>Tiger's Den Claws Out in the Ultimate Fighting Arena</h3>
+                    <p>Step into the ring with the fiercest competitors...</p>
+                    <p class="author">Joan Smith</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="projects">
+                <img src="images/whimsy.jpg" alt="Whimsy and Wonder">
+                <div class="content">
+                    <h3>Discover Whimsy and Wonder in Lost Memories</h3>
+                    <p>Embark on a journey through a magical world...</p>
+                    <p class="author">Joan Smith</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Adam Buier. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Filter blog cards
+                    blogCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
