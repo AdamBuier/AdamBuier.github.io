@@ -4,102 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Adam Buier</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your provided CSS file -->
 </head>
-<body class="bg-gray-100 font-sans">
+<body>
     <!-- Header -->
-    <header class="bg-white shadow-md p-4 flex justify-between items-center">
-        <a href="index.html" class="text-xl font-bold">Adam Buier</a>
+    <header>
+        <a href="index.html" class="logo">Adam Buier</a>
         <nav>
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="text-gray-800 hover:text-blue-700">Home</a></li>
-                <li><a href="projects.html" class="text-gray-800 hover:text-blue-700">Projects</a></li>
-                <li><a href="blog.html" class="text-gray-800 hover:text-blue-700">Blog</a></li>
-                <li><a href="about.html" class="text-gray-800 hover:text-blue-700">About</a></li>
-                <li><a href="resume.html" class="text-gray-800 hover:text-blue-700">Resume</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <div class="container mx-auto p-6 flex">
+    <div class="container clearfix">
         <!-- Sidebar -->
-        <aside class="w-1/4 bg-white shadow-md rounded-lg p-4">
-            <div class="mb-6">
-                <h2 class="text-lg font-bold border-b pb-2 mb-4">Project Page Quick Access</h2>
-                <ul class="space-y-2">
-                    <li><a href="#robots" class="text-blue-600 hover:underline">Robots</a></li>
-                    <li><a href="#professional-projects" class="text-blue-600 hover:underline">Professional Projects</a></li>
-                    <li><a href="#academia-and-coursework" class="text-blue-600 hover:underline">Academia and Coursework</a></li>
-                    <li><a href="#next2-heading" class="text-blue-600 hover:underline">Next2 Heading</a></li>
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h2>Project Page Quick Access</h2>
+                <ul>
+                    <li><a href="#robots">Robots</a></li>
+                    <li><a href="#professional-projects">Professional Projects</a></li>
+                    <li><a href="#academia-and-coursework">Academia and Coursework</a></li>
+                    <li><a href="#next2-heading">Next2 Heading</a></li>
                 </ul>
             </div>
-            <div>
-                <h2 class="text-lg font-bold border-b pb-2 mb-4">Active Projects</h2>
-                <ul class="space-y-2">
-                    <li><a href="projects/chippy/chippy.html" class="text-blue-600 hover:underline">Chippy</a></li>
-                    <li><a href="project-saiko.html" class="text-blue-600 hover:underline">Saiko!</a></li>
-                    <li><a href="project-sawblaze.html" class="text-blue-600 hover:underline">SawBlaze</a></li>
-                    <li><a href="project-silentspring.html" class="text-blue-600 hover:underline">Silent Spring</a></li>
+            <div class="sidebar-section">
+                <h2>Active Projects</h2>
+                <ul>
+                    <li><a href="projects/chippy/chippy.html">Chippy</a></li>
+                    <li><a href="project-saiko.html">Saiko!</a></li>
+                    <li><a href="project-sawblaze.html">SawBlaze</a></li>
+                    <li><a href="project-silentspring.html">Silent Spring</a></li>
                 </ul>
             </div>
         </aside>
 
         <!-- Projects Section -->
-        <main class="w-3/4 pl-6">
-            <h1 class="text-3xl font-bold mb-6">Projects</h1>
+        <main class="main-content">
+            <h1>Projects</h1>
 
             <!-- Robots Section -->
-            <section id="robots" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4">Robots</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="projects/chippy/chippy.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition project-card">
-                        <img src="projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy" class="w-full">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold">Chippy</h3>
+            <section id="robots">
+                <h2>Robots</h2>
+                <div class="project-grid">
+                    <a href="projects/chippy/chippy.html" class="project-card">
+                        <img src="projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy">
+                        <div class="content">
+                            <h3>Chippy</h3>
                         </div>
                     </a>
-                    <a href="project-saiko.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition project-card">
-                        <img src="images/saiko.jpg" alt="Saiko!" class="w-full">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold">Saiko!</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Heading Section -->
-            <section id="professional-projects" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4">Professional Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="project-megatron.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition project-card">
-                        <img src="images/megatron.jpg" alt="MegatRON" class="w-full">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold">MegatRON</h3>
+                    <a href="project-saiko.html" class="project-card">
+                        <img src="images/saiko.jpg" alt="Saiko!">
+                        <div class="content">
+                            <h3>Saiko!</h3>
                         </div>
                     </a>
                 </div>
             </section>
 
-            <!-- Next Heading Section -->
-            <section id="#academia-and-coursework" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4">Academia and Coursework</h2>
-<!-- Trash Collector -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="project-sawblaze.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition project-card">
-                        <img src="projects\Trash Collector\img\Trash Thumbnail.png" alt="Trash Collector" class="w-full">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold">Trash Collector</h3>
+            <!-- Professional Projects Section -->
+            <section id="professional-projects">
+                <h2>Professional Projects</h2>
+                <div class="project-grid">
+                    <a href="project-megatron.html" class="project-card">
+                        <img src="images/megatron.jpg" alt="MegatRON">
+                        <div class="content">
+                            <h3>MegatRON</h3>
                         </div>
                     </a>
-<!-- 1001 Bot -->
-                    <a href="project-sawblaze.html" class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition project-card">
-                        <img src="projects\1001_bot\img\1001 bot thumbnail.png" alt="Ball Launcher" class="w-full">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold">Ball Launcher</h3>
+                </div>
+            </section>
+
+            <!-- Academia and Coursework Section -->
+            <section id="academia-and-coursework">
+                <h2>Academia and Coursework</h2>
+                <div class="project-grid">
+                    <a href="project-sawblaze.html" class="project-card">
+                        <img src="projects/Trash Collector/img/Trash Thumbnail.png" alt="Trash Collector">
+                        <div class="content">
+                            <h3>Trash Collector</h3>
+                        </div>
+                    </a>
+                    <a href="project-sawblaze.html" class="project-card">
+                        <img src="projects/1001_bot/img/1001 bot thumbnail.png" alt="Ball Launcher">
+                        <div class="content">
+                            <h3>Ball Launcher</h3>
                         </div>
                     </a>
                 </div>
@@ -108,7 +103,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white shadow-md p-4 text-center">
+    <footer>
         <p>&copy; 2025 Adam Buier. All rights reserved.</p>
     </footer>
 </body>
