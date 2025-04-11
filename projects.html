@@ -3,83 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Buier - Home</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <title>Projects | Adam Buier</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <a class="h1 title" href="index.html">ADAM BUIER</a>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <a href="index.html" class="logo">Adam Buier</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="projects">
-            <div class="container mt-5">
-                <h1 class="text-center section-header">Projects</h1>
-                <div class="seperator-25px"></div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a class="project-card" href="./projects/Trash Collector/TrashCollector.html">
-                            <div class="card mb-4 shadow-lg">
-                                <img src="./projects/Trash Collector/img/Trash Thumbnail.png" class="card-img-top" alt="Evil looking robot with googly eyes">
-                                <div class="card-body text-center">
-                                    <p class="card-title">Trash Collector</p>
-                                    <p class="card-subtitle">RBE 2002 Project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="project-card" href="./projects/chippy/chippy.html">
-                            <div class="card mb-4 shadow-lg">
-                                <img src="./projects/chippy/img/Chippy Thumbnail.png" class="card-img-top">
-                                <div class="card-body text-center">
-                                    <p class="card-title">Chippy</p>
-                                    <p class="card-subtitle">Beetleweight Combat Robot</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="project-card" href="./projects/Walker/Walker.html">
-                            <div class="card mb-4 shadow-lg">
-                                <img src="./projects/Walker/img/Walker Thumbnail.png" class="card-img-top">
-                                <div class="card-body text-center">
-                                    <p class="card-title">Walker Robot</p>
-                                    <p class="card-subtitle">Arduino Side Project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="project-card" href="./projects/AutonomousRobot.html">
-                            <div class="card mb-4 shadow-lg">
-                                <img src="./projects/1001_bot/img/1001 thumbnail.png" class="card-img-top">
-                                <div class="card-body text-center">
-                                    <p class="card-title">Collector Robot</p>
-                                    <p class="card-subtitle">RBE 1001 Project</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <script src="js/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <h1>Projects</h1>
+        
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h2>Project Page Quick Access</h2>
+                <ul>
+                    <li><a href="#robots">Robots</a></li>
+                    <li><a href="#heading">Heading</a></li>
+                    <li><a href="#next-heading">Next Heading</a></li>
+                    <li><a href="#next2-heading">Next2 Heading</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h2>Active Projects</h2>
+                <ul>
+                    <li><a href="projects\chippy\chippy.html">Chippy</a></li>
+                    <li><a href="project-saiko.html">Saiko!</a></li>
+                    <li><a href="project-sawblaze.html">SawBlaze</a></li>
+                    <li><a href="project-silentspring.html">Silent Spring</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <section id="robots">
+                <h2>Robots</h2>
+                <div class="project-grid">
+                    <a href="projects\chippy\chippy.html" class="project-card">
+                        <img src="projects\chippy\img\ChippyV3Pic.jpg" alt="Chippy">
+                        <div class="content">
+                            <h3>Chippy</h3>
+                        </div>
+                    </a>
+                    <a href="project-saiko.html" class="project-card">
+                        <img src="images/saiko.jpg" alt="Saiko!">
+                        <div class="content">
+                            <h3>Saiko!</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <section id="heading">
+                <h2>Heading</h2>
+                <div class="project-grid">
+                    <a href="project-megatron.html" class="project-card">
+                        <img src="images/megatron.jpg" alt="MegatRON">
+                        <div class="content">
+                            <h3>MegatRON</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <section id="next-heading">
+                <h2>Next Heading</h2>
+                <div class="project-grid">
+                    <a href="project-sawblaze.html" class="project-card">
+                        <img src="images/sawblaze.jpg" alt="SawBlaze">
+                        <div class="content">
+                            <h3>SawBlaze</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jamison Go. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
