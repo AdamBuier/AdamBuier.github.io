@@ -246,6 +246,7 @@ footer {
 }
 
 .project-card .content {
+  font-size: 40px;
   padding: 20px;
   text-align: center;
 }
@@ -616,11 +617,11 @@ footer {
 }
 
 .project-card img {
-  height: 70%; /* Adjust the image height relative to the card */
+  height: 80%; /* Adjust the image height relative to the card */
 }
 
 .project-card .p-4 {
-  height: 30%; /* Adjust the text container height */
+  height: 20%; /* Adjust the text container height */
 }
 
 /* Responsive Design */
