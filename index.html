@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Buier</title>
+    <title>Adam Buier - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,138 +21,76 @@
     </header>
 
     <div class="container">
-        <div class="project-header">
-            <h1>Chippy</h1>
-            <div class="breadcrumbs">
-                <a href="index.html">Home</a> &gt; 
-                <a href="projects.html">Projects</a> &gt; 
-                <span>Chippy</span>
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a robotics engineer passionate about creating innovative solutions.</p>
+        
+        <h2>Featured Projects</h2>
+        <div class="carousel">
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <img src="images/silent-spring.jpg" alt="Silent Spring Robot">
+                    <div class="carousel-caption">
+                        <h3>Silent Spring</h3>
+                        <p>A battle robot designed for competitions</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/saiko.jpg" alt="Saiko! Robot">
+                    <div class="carousel-caption">
+                        <h3>Saiko!</h3>
+                        <p>An autonomous navigation robot</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/megatron.jpg" alt="MegatRON Robot">
+                    <div class="carousel-caption">
+                        <h3>MegatRON</h3>
+                        <p>A heavy-duty industrial automation robot</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
             </div>
         </div>
-        
-        <div class="project-detail">
-            <img src="images/silent-spring-full.jpg" alt="Silent Spring Robot" class="project-hero-image">
-            
-            <div class="project-meta">
-                <div class="meta-item">
-                    <strong>Category:</strong> Combat Robot
+
+        <h2>Recent Blog Posts</h2>
+        <div class="carousel">
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <img src="images/blog-silent-spring.jpg" alt="Silent Spring Update">
+                    <div class="carousel-caption">
+                        <h3>Silent Spring: Competition Results</h3>
+                        <p>Our journey at the National Robotics Championship</p>
+                    </div>
                 </div>
-                <div class="meta-item">
-                    <strong>Status:</strong> Active
+                <div class="carousel-item">
+                    <img src="images/blog-saiko.jpg" alt="Saiko! Sensors">
+                    <div class="carousel-caption">
+                        <h3>Saiko!: New Sensor Implementation</h3>
+                        <p>Improving navigation with LIDAR technology</p>
+                    </div>
                 </div>
-                <div class="meta-item">
-                    <strong>Started:</strong> 2023
-                </div>
-                <div class="meta-item">
-                    <strong>Team Size:</strong> 4 people
+                <div class="carousel-item">
+                    <img src="images/blog-sawblaze.jpg" alt="SawBlaze Design">
+                    <div class="carousel-caption">
+                        <h3>SawBlaze: Design Process</h3>
+                        <p>From concept sketches to working prototype</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="project-description">
-                <p>Silent Spring is a heavyweight combat robot designed for the BattleBots competition. It features a unique spring-loaded flipper mechanism that can toss opponents into the air.</p>
-                
-                <p>The robot was designed with two main goals in mind: create a formidable weapon system that could disable opponents quickly, and develop a highly maneuverable platform that could outpace other heavyweights in the arena.</p>
+            <div class="carousel-nav">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
             </div>
-            
-            <section class="project-section">
-                <h2>Features</h2>
-                <ul>
-                    <li>Pneumatic flipper capable of lifting 250 lbs</li>
-                    <li>Custom armor plating designed to withstand impacts</li>
-                    <li>Advanced drive system for agile movement</li>
-                    <li>Remote control system with fail-safes</li>
-                    <li>Lightweight chassis that maximizes power-to-weight ratio</li>
-                </ul>
-            </section>
-            
-            <section class="project-section">
-                <h2>Development Journey</h2>
-                <p>Silent Spring went through three major design iterations. The first prototype suffered from power delivery issues, which we solved in the second version by implementing a more efficient pneumatic system. The current version has refined armor placement and improved electronics protection.</p>
-                
-                <p>One of the biggest challenges we faced was balancing the weight distribution. The pneumatic system is heavy, but we needed to maintain maneuverability. After several prototypes, we found the optimal placement that allows for both a powerful flipper and responsive driving.</p>
-            </section>
-            
-            <section class="project-section">
-                <h2>Technical Specifications</h2>
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <h3>Weight</h3>
-                        <p>250 lbs (113 kg)</p>
-                    </div>
-                    <div class="spec-item">
-                        <h3>Dimensions</h3>
-                        <p>30" x 40" x 12" (76cm x 102cm x 30cm)</p>
-                    </div>
-                    <div class="spec-item">
-                        <h3>Top Speed</h3>
-                        <p>15 mph (24 km/h)</p>
-                    </div>
-                    <div class="spec-item">
-                        <h3>Power Source</h3>
-                        <p>24V LiPo batteries + Compressed air</p>
-                    </div>
-                    <div class="spec-item">
-                        <h3>Materials</h3>
-                        <p>Hardened steel frame, Titanium armor</p>
-                    </div>
-                    <div class="spec-item">
-                        <h3>Control System</h3>
-                        <p>Custom PCB with fail-safe protocols</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="project-section">
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/silent-spring-design.jpg" alt="Silent Spring Design" onclick="openModal(this.src)">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/silent-spring-components.jpg" alt="Silent Spring Components" onclick="openModal(this.src)">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/silent-spring-competition.jpg" alt="Silent Spring Competition" onclick="openModal(this.src)">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/silent-spring-testing.jpg" alt="Silent Spring Testing" onclick="openModal(this.src)">
-                    </div>
-                </div>
-                
-                <div id="imageModal" class="modal">
-                    <span class="close-modal">&times;</span>
-                    <img class="modal-content" id="modalImage">
-                </div>
-            </section>
-            
-            <section class="project-section">
-                <h2>Related Blog Posts</h2>
-                <div class="project-blogs">
-                    <div class="blog-card">
-                        <img src="images/blog-silent-spring.jpg" alt="Silent Spring Update">
-                        <div class="content">
-                            <span class="date">April 5, 2025</span>
-                            <h3>Silent Spring: Competition Results</h3>
-                            <p>Our journey at the National Robotics Championship and how we overcame unexpected challenges.</p>
-                            <a href="blog-post-silent-spring-competition.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <img src="images/blog-silent-spring-2.jpg" alt="Silent Spring Design">
-                        <div class="content">
-                            <span class="date">February 18, 2025</span>
-                            <h3>Silent Spring: Pneumatic System Upgrade</h3>
-                            <p>How we improved the power delivery system to make the flipper more effective.</p>
-                            <a href="blog-post-silent-spring-upgrade.html" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Jamison Go. All rights reserved.</p>
+        <p>&copy; 2025 Adam Buier. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js"></script>
+</body>
+</html>
