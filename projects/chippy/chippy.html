@@ -3,107 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Buier - Home</title>
-    <link rel="stylesheet" href="../../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Silent Spring | Jamison Go</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <a class="h1 title" href="../../index.html">ADAM BUIER</a>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../experience.html">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <a href="index.html" class="logo">Jamison Go</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="content">
 
-            <div class="container my-5">
-                <div class="row align-items-start">
-                    <div class="col-md-6 fs-5">
-                        <div class="section-header-massive">
-                            CHIPPY
-                        </div>
-                        <p>
-                            Beetleweight Combat Robot   <br>
-                            Jan 2024 - Current <br><br>
-                            Chippy is a 3lb hammersaw style combat robot designed to strike and break the top of an opponents bot. It has competed at the National Havoc Robot League (NHRL) twice and currently holds a record of 4-2.
-                        </p>
+    <div class="container">
+        <div class="project-header">
+            <h1>Silent Spring</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> &gt; 
+                <a href="projects.html">Projects</a> &gt; 
+                <span>Silent Spring</span>
+            </div>
+        </div>
+        
+        <div class="project-detail">
+            <img src="images/silent-spring-full.jpg" alt="Silent Spring Robot" class="project-hero-image">
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <strong>Category:</strong> Combat Robot
+                </div>
+                <div class="meta-item">
+                    <strong>Status:</strong> Active
+                </div>
+                <div class="meta-item">
+                    <strong>Started:</strong> 2023
+                </div>
+                <div class="meta-item">
+                    <strong>Team Size:</strong> 4 people
+                </div>
+            </div>
+            
+            <div class="project-description">
+                <p>Silent Spring is a heavyweight combat robot designed for the BattleBots competition. It features a unique spring-loaded flipper mechanism that can toss opponents into the air.</p>
+                
+                <p>The robot was designed with two main goals in mind: create a formidable weapon system that could disable opponents quickly, and develop a highly maneuverable platform that could outpace other heavyweights in the arena.</p>
+            </div>
+            
+            <section class="project-section">
+                <h2>Features</h2>
+                <ul>
+                    <li>Pneumatic flipper capable of lifting 250 lbs</li>
+                    <li>Custom armor plating designed to withstand impacts</li>
+                    <li>Advanced drive system for agile movement</li>
+                    <li>Remote control system with fail-safes</li>
+                    <li>Lightweight chassis that maximizes power-to-weight ratio</li>
+                </ul>
+            </section>
+            
+            <section class="project-section">
+                <h2>Development Journey</h2>
+                <p>Silent Spring went through three major design iterations. The first prototype suffered from power delivery issues, which we solved in the second version by implementing a more efficient pneumatic system. The current version has refined armor placement and improved electronics protection.</p>
+                
+                <p>One of the biggest challenges we faced was balancing the weight distribution. The pneumatic system is heavy, but we needed to maintain maneuverability. After several prototypes, we found the optimal placement that allows for both a powerful flipper and responsive driving.</p>
+            </section>
+            
+            <section class="project-section">
+                <h2>Technical Specifications</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h3>Weight</h3>
+                        <p>250 lbs (113 kg)</p>
                     </div>
-                    <div class="col-md-6 d-flex">
-                        <img src="img/IMG_9882.jpg" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
+                    <div class="spec-item">
+                        <h3>Dimensions</h3>
+                        <p>30" x 40" x 12" (76cm x 102cm x 30cm)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Top Speed</h3>
+                        <p>15 mph (24 km/h)</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Power Source</h3>
+                        <p>24V LiPo batteries + Compressed air</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Materials</h3>
+                        <p>Hardened steel frame, Titanium armor</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Control System</h3>
+                        <p>Custom PCB with fail-safe protocols</p>
                     </div>
                 </div>
-
-                <div class="seperator-50px"></div>
-                    <div class="col-12">
-                        <img src="img/IMG_7442.JPG" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
+            </section>
+            
+            <section class="project-section">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/silent-spring-design.jpg" alt="Silent Spring Design" onclick="openModal(this.src)">
                     </div>
-                <div class="seperator-50px"></div>
-                <div class = "row align-items-start">
-                    <div class="col-md-6 fs-5">
-                        <div class="section-header">
-                            CAD & Design
+                    <div class="gallery-item">
+                        <img src="images/silent-spring-components.jpg" alt="Silent Spring Components" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/silent-spring-competition.jpg" alt="Silent Spring Competition" onclick="openModal(this.src)">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/silent-spring-testing.jpg" alt="Silent Spring Testing" onclick="openModal(this.src)">
+                    </div>
+                </div>
+                
+                <div id="imageModal" class="modal">
+                    <span class="close-modal">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                </div>
+            </section>
+            
+            <section class="project-section">
+                <h2>Related Blog Posts</h2>
+                <div class="project-blogs">
+                    <div class="blog-card">
+                        <img src="images/blog-silent-spring.jpg" alt="Silent Spring Update">
+                        <div class="content">
+                            <span class="date">April 5, 2025</span>
+                            <h3>Silent Spring: Competition Results</h3>
+                            <p>Our journey at the National Robotics Championship and how we overcame unexpected challenges.</p>
+                            <a href="blog-post-silent-spring-competition.html" class="read-more">Read More</a>
                         </div>
-                        <p>
-                           I used Onshape and Solidworks to CAD Chippy as well as run stress simulations to ensure the robots functionality.<br><br>
-                        Chippy has a custom weapon motor designed to withstand the high forces created when striking a bot  
-                        </p>
                     </div>
-                    <div class="col-md-6 fs-5">
-                        <img src="img/Chippy Side View.png" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
-                    </div>
-                    
-                </div> 
-
-                <div class="seperator-50px"></div>
-
-                <div class = "row align-items-center">
-                    <div class="col-md-6 fs-5 d-flex justify-content-center">
-                        <img src="img/3dprint.png" class="img-fluid w-75 rounded-xl" alt="Menacing robot with googly eyes.">
-                    </div>
-                    <div class="col-md-6 fs-5">
-                        <div class="section-header">
-                        Materials
+                    <div class="blog-card">
+                        <img src="images/blog-silent-spring-2.jpg" alt="Silent Spring Design">
+                        <div class="content">
+                            <span class="date">February 18, 2025</span>
+                            <h3>Silent Spring: Pneumatic System Upgrade</h3>
+                            <p>How we improved the power delivery system to make the flipper more effective.</p>
+                            <a href="blog-post-silent-spring-upgrade.html" class="read-more">Read More</a>
                         </div>
-                        <p>
-                            Chippy is made out of 3D printed TPU, which is super flexible and good at absorbing hits. 
-                            <br><br>Additionally, it features machined AR500 forks and blades, as well as carbon fiber and UHWM parts.
-                        </p>
                     </div>
-                </div> 
+                </div>
+            </section>
+        </div>
+    </div>
 
-                <div class="seperator-50px"></div>
+    <footer>
+        <p>&copy; 2025 Jamison Go. All rights reserved.</p>
+    </footer>
 
-                <div class = "row align-items-center">
-                    <div class="col-md-6 fs-5">
-                        <div class="section-header">
-                            Soldering & Electronics
-                        </div>
-                        <p>
-                           Chippy is powered by four brushless motors that control the drive, arm, and weapon blade. Each motor is soldered to its own electronic speed controller (ESC), which interfaces with a remote control for operation.
-                        </p>
-                    </div>
-                    <div class="col-md-6 fs-5">
-                        <img src="img/Chippy Electronics.png" class="img-fluid w-100 rounded-xl" alt="Menacing robot with googly eyes.">
-                    </div>
-
-                    <div class="seperator-50px"></div>
-
-                </div> 
-                    
-                </div> 
-
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+    <script src="scripts.js"></script>
