@@ -253,7 +253,7 @@ footer {
 
 /* Blog Page */
 .blog-container {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -297,7 +297,8 @@ footer {
 }
 
 .blog-main img {
-  height: 300px; /* Adjust height for the main blog image */
+  height: 400px; /* Adjust height for the main blog image */
+  width: 300px;
   object-fit: cover;
 }
 
@@ -322,11 +323,11 @@ footer {
 }
 
 .blog-card .content {
-  padding: 15px;
+  padding: 20px;
 }
 
 .blog-card .content h3 {
-  font-size: 18px; /* Smaller font size for smaller blog titles */
+  font-size: 23px; /* Smaller font size for smaller blog titles */
   margin-bottom: 10px;
 }
 
