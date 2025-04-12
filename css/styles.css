@@ -13,13 +13,12 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: #0066cc;
-  transition: color 0.3s ease;
+  color: inherit; /* Inherit the text color from the parent element */
+  text-decoration: underline; /* Add underline to links */
 }
 
 a:hover {
-  color: #004080;
+  text-decoration: none; /* Remove underline on hover (optional) */
 }
 
 ul {
