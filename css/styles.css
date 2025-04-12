@@ -333,60 +333,12 @@ footer {
   color: white;
 }
 
-/* Header */
-.nhrl-header {
-  background-color: #fff; /* Match blog header background */
-  color: #333; /* Match blog text color */
-  padding: 20px; /* Match blog header padding */
-  border-bottom: 1px solid #eee; /* Add border for consistency */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Match blog header shadow */
-}
-
-.nhrl-logo {
-  font-size: 24px; /* Match blog header font size */
-  font-weight: bold;
-  color: #222; /* Match blog header logo color */
-  text-decoration: none;
-}
-
-.nhrl-nav-list {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nhrl-nav-link {
-  color: #555; /* Match blog nav link color */
-  font-size: 18px; /* Match blog nav font size */
-  position: relative;
-  text-decoration: none;
-}
-
-.nhrl-nav-link:after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #0066cc; /* Match blog hover underline color */
-  transition: width 0.3s ease;
-}
-
-.nhrl-nav-link:hover:after {
-  width: 100%;
-}
-
-.nhrl-nav-link.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
 
 /* Blog Content */
 .nhrl-content {
   max-width: 1200px; /* Match blog container width */
   margin: 0 auto;
-  padding: 60px; /* Match blog container padding */
+  padding: 100px; /* Match blog container padding */
   font-family: Arial, sans-serif; /* Match blog font */
   color: #333; /* Match blog text color */
 }
@@ -397,9 +349,9 @@ footer {
 }
 
 .nhrl-title {
-  font-size: 32px; /* Match blog title font size */
+  font-size: 48px; /* Match blog title font size */
   margin-bottom: 10px;
-  color: #222; /* Match blog title color */
+  color: #333; /* Match blog text color */
   text-align: center
 }
 
@@ -419,11 +371,11 @@ footer {
 .nhrl-subheading {
   font-size: 24px; /* Match blog subheading font size */
   margin-top: 20px;
-  color: #333; /* Match blog subheading color */
+  color: #333; /* Match blog text color */
 }
 
 .nhrl-paragraph {
-  font-size: 16px; /* Match blog paragraph font size */
+  font-size: 18px; /* Match blog paragraph font size */
   line-height: 1.6; /* Match blog line height */
   color: #555; /* Match blog paragraph color */
 }
@@ -432,7 +384,7 @@ footer {
   margin: 20px 0;
   padding-left: 40px;
   list-style: disc;
-  color: #555; /* Match blog list color */
+  color: #333; /* Match blog text color */
 }
 
 /* Footer */
