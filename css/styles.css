@@ -386,7 +386,7 @@ footer {
 .nhrl-content {
   max-width: 1200px; /* Match blog container width */
   margin: 0 auto;
-  padding: 20px; /* Match blog container padding */
+  padding: 60px; /* Match blog container padding */
   font-family: Arial, sans-serif; /* Match blog font */
   color: #333; /* Match blog text color */
 }
@@ -400,6 +400,7 @@ footer {
   font-size: 32px; /* Match blog title font size */
   margin-bottom: 10px;
   color: #222; /* Match blog title color */
+  text-align: center
 }
 
 .nhrl-published {
@@ -428,8 +429,8 @@ footer {
 }
 
 .nhrl-list {
-  margin: 10px 0;
-  padding-left: 20px;
+  margin: 20px 0;
+  padding-left: 40px;
   list-style: disc;
   color: #555; /* Match blog list color */
 }
