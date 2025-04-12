@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Adam Buier</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your provided CSS file -->
+    <style>
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .blog-header .published {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">Adam Buier</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <div class="content">
+        <div class="blog-header">
+            <h1>Chippy NHRL April 2025<br>Recap</h1>
+            <div class="published">Published by Adam Buier on April 11, 2025</div>
+            <img src="img/ChippyV3Pic.jpg" alt="Chippy V3" class="hero-image">
+        </div>
+
+        <h3>Fight 1: Gallos12</h3>
+        <p>My first match was against Gallos12, a veteran Fingertech beater bar bot that last competed in 2022. Chippy quickly ran into a couple of problems that would plague me for the rest of the competition:</p>
+        <ul>
+            <li><strong>Blade kept getting stuck:</strong> As I alluded to in the version 3 breakdown, changing the weapon geometry didn’t prevent the blade from getting stuck. The geometry change and switching the battery to 5s allowed it to penetrate deeper into opponents, which probably made the issue worse. I got stuck twice, with the match ending after the bots needed to be unstuck a second time. While I wasn’t penalized directly for getting stuck, it hurt my control points.</li>
+            <li><strong>Gear stripping:</strong> Switching to a nylon driving gear created a rough surface that wore away the TPU gear on the arm. During normal operation, the arm worked fine for the whole match. However, when I got stuck in Gallos12 and Till Death and tried to pull the blade out, it stripped the gear instantly. This meant I had to replace the TPU gear after every match.</li>
+        </ul>
+        <p>Despite the problems, I won by judges' decision after disabling Gallos12’s weapon motor and damaging its drive.</p>
+
+        <h3>Fight 2: Till Death</h3>
+        <p>Next up was Till Death, a horizontal ring spinner. I ran into the same issues fighting them as well. This time, I was able to take out their weapon motor and receiver before my blade got stuck. Side note: The new blade penetrates deep and took them a good 2 minutes to unstick. I won the fight by knockout because they didn't have a functioning receiver.</p>
+        <p>After the fight, I realized one of the signal wires had ripped out of my weapon motor. With a quick motor swap, I was ready to go again.</p>
+
+        <h3>Fight 3: Katana</h3>
+        <p>My next opponent was Katana, a 4-wheel drive vertical spinner. This was my favorite fight of the day because Katana is just a sick bot, and some of my friends had fought (and lost to) it. I was looking for a little revenge.</p>
+        <p>The fight started normally. Katana ended up eating its own weapon belt, and I sniped its drive pulley, breaking a drive motor. However, that hit also caused one of my phase wires to come loose, preventing my weapon motor from spinning up to full speed. Strangely, this issue fixed itself during the post-fight functionality test, where the motor worked perfectly again. I ended up winning by judges’ decision.</p>
+
+        <h3>Fight 4: Big G</h3>
+        <p>My final fight of the day was against Big G, another beater bar. Going into this match, I was concerned that my weapon system wouldn’t work at all due to the motor problems from the previous fight. I also forgot to swap out the worn gear on the arm.</p>
+        <p>During the match, I kept losing engagements with my forks, causing my bot to go flying. I also smoked the weapon motor when the bot was upside down. My controller’s keybindings are too close together, so when I tried to swing the arm to self-right, I accidentally turned the weapon blade on and burned it out. The fight went the full three minutes, and I lost by judges’ decision.</p>
+
+        <h3>Overall</h3>
+        <p>The mission of running Chippy into the ground was accomplished. I ended NHRL with a 3-1 record, the same as in October. I also ended up going through 2 weapon motors, a weapon ESC, and 5 gears. I wish Chippy went a little farther, but a majority of the bot held up great, and I had an amazing time competing!</p>
+
+        <h3>More Changes</h3>
+        <p>The biggest issues revolved around improving the weapon system and making it more reliable. I hope to solve this by:</p>
+        <ul>
+            <li><strong>Switching the arm gear to CF Nylon:</strong> This would greatly reduce the stripping on the gears and (hopefully) help me pull out of opponents better.</li>
+            <li><strong>Designing my own Hub motor:</strong> Mechanically, the Just Cuz RDY-MINI-5022-V1 hub motor held up great. The main issue was the wires pulling out. I could buy more, but due to U.S. tariffs on China, Seth mentioned he might have trouble restocking them. I could switch to the Repeat Robotics hub motor, but I’ve heard mixed things about their reliability. So I may be forced to design and make my hub motors. On the upside, this would be cheaper, and I have an interesting idea of integrating it directly into the weapon arm.</li>
+            <li><strong>Changing Weapon Geometry:</strong> To fix getting stuck, I think adding a greater relief angle to the blade and switching the gear to CF nylon will help.</li>
+        </ul>
+        <p>Aside from the weapon system, other changes I want to make include:</p>
+        <ul>
+            <li>Increasing screw hole tolerances to make repairs easier.</li>
+            <li>Adding more armor configurations to counter specific opponents.</li>
+            <li>Improving my driving skills through practice.</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Adam Buier. All rights reserved.</p>
+    </footer>
+</body>
+</html>
