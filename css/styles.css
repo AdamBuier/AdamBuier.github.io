@@ -335,15 +335,17 @@ footer {
 
 /* Header */
 .nhrl-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: #fff; /* Match blog header background */
+  color: #333; /* Match blog text color */
+  padding: 20px; /* Match blog header padding */
+  border-bottom: 1px solid #eee; /* Add border for consistency */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Match blog header shadow */
 }
 
 .nhrl-logo {
-  font-size: 24px;
+  font-size: 24px; /* Match blog header font size */
   font-weight: bold;
-  color: #fff;
+  color: #222; /* Match blog header logo color */
   text-decoration: none;
 }
 
@@ -354,8 +356,25 @@ footer {
 }
 
 .nhrl-nav-link {
-  color: #fff;
+  color: #555; /* Match blog nav link color */
+  font-size: 18px; /* Match blog nav font size */
+  position: relative;
   text-decoration: none;
+}
+
+.nhrl-nav-link:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0066cc; /* Match blog hover underline color */
+  transition: width 0.3s ease;
+}
+
+.nhrl-nav-link:hover:after {
+  width: 100%;
 }
 
 .nhrl-nav-link.active {
@@ -365,9 +384,11 @@ footer {
 
 /* Blog Content */
 .nhrl-content {
-  max-width: 800px;
+  max-width: 1200px; /* Match blog container width */
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px; /* Match blog container padding */
+  font-family: Arial, sans-serif; /* Match blog font */
+  color: #333; /* Match blog text color */
 }
 
 .nhrl-blog-header {
@@ -376,45 +397,53 @@ footer {
 }
 
 .nhrl-title {
-  font-size: 32px;
+  font-size: 32px; /* Match blog title font size */
   margin-bottom: 10px;
+  color: #222; /* Match blog title color */
 }
 
 .nhrl-published {
-  font-size: 14px;
-  color: #666;
+  font-size: 14px; /* Match blog published date font size */
+  color: #666; /* Match blog published date color */
 }
 
 .nhrl-hero-image {
   width: 100%;
   height: auto;
   margin-top: 20px;
+  border-radius: 10px; /* Match blog image border radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Match blog image shadow */
 }
 
 .nhrl-subheading {
-  font-size: 24px;
+  font-size: 24px; /* Match blog subheading font size */
   margin-top: 20px;
+  color: #333; /* Match blog subheading color */
 }
 
 .nhrl-paragraph {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 16px; /* Match blog paragraph font size */
+  line-height: 1.6; /* Match blog line height */
+  color: #555; /* Match blog paragraph color */
 }
 
 .nhrl-list {
   margin: 10px 0;
   padding-left: 20px;
+  list-style: disc;
+  color: #555; /* Match blog list color */
 }
 
+/* Footer */
 .nhrl-footer {
   text-align: center;
-  padding: 10px 0;
-  background-color: #333;
-  color: #fff;
+  padding: 30px 20px; /* Match blog footer padding */
+  background-color: #333; /* Match blog footer background */
+  color: white; /* Match blog footer text color */
 }
 
 .nhrl-footer-text {
-  font-size: 14px;
+  font-size: 14px; /* Match blog footer font size */
 }
 
 /* About Page */
