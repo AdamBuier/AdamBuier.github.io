@@ -363,6 +363,14 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Match blog image shadow */
 }
 
+.nhrl-split-image {
+  width: 50%;
+  height: auto;
+  margin: 20px auto; /* Center the image */
+  border-radius: 10px; /* Match blog image border radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Match blog image shadow */
+}
+
 .nhrl-subheading {
   font-size: 36px; /* Match blog subheading font size */
   margin-top: 20px;
@@ -382,7 +390,7 @@ footer {
   font-size: 24px;
   padding-left: 20px; /* Reduce padding for a more compact layout */
   list-style: disc;
-  color: #000000; /* Match blog text color */
+  color: #555; /* Match blog paragraph color */
   text-align: left; /* Keep list items left-aligned */
 }
 
