@@ -336,7 +336,7 @@ footer {
 
 /* Blog Content */
 .nhrl-content {
-  max-width: 800px; /* Reduce the width for a more compact layout */
+  max-width: 900px; /* Reduce the width for a more compact layout */
   margin: 0 auto; /* Center the content horizontally */
   padding: 40px 20px; /* Adjust padding for better spacing */
   font-family: Arial, sans-serif; /* Match blog font */
