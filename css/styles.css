@@ -363,10 +363,16 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Match blog image shadow */
 }
 
+.nhrl-split-container {
+  display: flex; /* Use flexbox to align images side by side */
+  justify-content: center; /* Center the images horizontally */
+  gap: 20px; /* Add a gap between the images */
+  margin: 20px auto; /* Center the container and add vertical spacing */
+}
+
 .nhrl-split-image {
-  width: 50%;
+  width: 45%; /* Adjust the width of each image */
   height: auto;
-  margin: 20px auto; /* Center the image */
   border-radius: 10px; /* Match blog image border radius */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Match blog image shadow */
 }
