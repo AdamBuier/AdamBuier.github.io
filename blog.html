@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Adam Buier</title>
-    <link rel="stylesheet" href="/css/styles.css"> <!-- Use absolute path -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your provided CSS file -->
+
 </head>
 <body>
     <!-- Header -->
     <header>
-        <a href="/index.html" class="logo">Adam Buier</a>
+        <a href="index.html" class="logo">Adam Buier</a>
         <nav>
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/projects.html">Projects</a></li>
-                <li><a href="/blog.html" class="active">Blog</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -33,15 +34,25 @@
 
         <div class="blog-grid">
             <!-- Newest Blog Post -->
-            <a href="/blog/April_NHRL_2025/index.html" class="blog-card blog-main" data-category="Chippy">
-                <img src="/blog/April_NHRL_2025/img/AprilNHRLThumbnail.png" alt="April NHRL">
+            <a href="blog\April_NHRL_2025\index.html" class="blog-card blog-main" data-category="Chippy">
+                <img src="blog\April_NHRL_2025\img\AprilNHRLThumbnail.png" alt="April NHRL">
                 <div class="content">
                     <h3>Chippy NHRL April 2025 Recap</h3>
                     <p>April 11, 2025</p>
                 </div>
             </a>
+            <!-- <a href="blog\April_NHRL_2025\Chippy_V3_Design_Breakdown\img\Chippy_V3_Design_Breakdown.html" class="blog-card blog-main" data-category="Chippy">
+                <img src="projects\chippy\img\ChippyV3Pic.jpg" alt="Chippy V3 Design Breakdown">
+                <div class="content">
+                    <h3>Chippy V3 Design Breakdown</h3>
+                    <p>The gaming world has been ablaze with anticipation...</p>
+                    <p>April 11, 2025</p>>
+                </div>
+            </a> -->
         </div>
     </div>
+
+
 
     <script>
         // Filter functionality
@@ -69,10 +80,9 @@
             });
         });
     </script>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Adam Buier. All rights reserved.</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Adam Buier. All rights reserved.</p>
+        </footer>
 </body>
 </html>
