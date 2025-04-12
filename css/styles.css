@@ -337,8 +337,8 @@ footer {
 /* Blog Content */
 .nhrl-content {
   max-width: 1200px; /* Match blog container width */
-  margin: 0 auto;
-  padding: 100px; /* Match blog container padding */
+  margin: 0 80px;
+  padding: 60px; /* Match blog container padding */
   font-family: Arial, sans-serif; /* Match blog font */
   color: #333; /* Match blog text color */
 }
