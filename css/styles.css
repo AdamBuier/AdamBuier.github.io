@@ -460,12 +460,14 @@ footer {
   padding: 8px 16px;
   background-color: #f0f0f0;
   border-radius: 5px;
+  color: inherit; /* Inherit the text color from the parent element */
+  text-decoration: underline; /* Add underline to links */
   transition: background 0.3s ease;
 }
 
 .social-link:hover {
-  background-color: #0066cc;
-  color: white;
+  text-decoration: none; /* Remove underline on hover (optional) */
+
 }
 
 /* Resume Page */
