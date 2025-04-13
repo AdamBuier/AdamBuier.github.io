@@ -23,63 +23,80 @@
     </header>
 
     <!-- Main Content -->
-    <div class="projects-header">
-        <h1>Projects</h1>
-        <div class="filter-options">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="robots">Robots</button>
-            <button class="filter-btn" data-filter="professional">Professional Projects</button>
-            <button class="filter-btn" data-filter="academia">Academia</button>
+    <div class="projects-container">
+        <div class="projects-header">
+            <h1>Projects</h1>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="robots">Robots</button>
+                <button class="filter-btn" data-filter="professional">Professional Projects</button>
+                <button class="filter-btn" data-filter="academia">Academia</button>
         </div>
     </div>
 
-            <!-- Robots Section -->
-            <section id="robots">
-                <h2 class="section-title">Robots</h2>
-                <div class="project-grid">
-                    <a href="chippy/index.html" class="project-card" data-category="robots">
-                        <img src="chippy/img/ChippyV3Pic.jpg" alt="Chippy">
-                        <div class="content">
-                            <h3>Chippy</h3>
-                        </div>
-                    </a>
-                    <a href="Walker/index.html" class="project-card" data-category="robots">
-                        <img src="Walker/img/Walker Thumbnail.png" alt="Walker">
-                        <div class="content">
-                            <h3>Walker</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
+        <!-- Robots Section -->
+        <section id="robots">
+            <h2 class="section-title">Robots</h2>
+            <div class="project-grid">
+                <a href="/projects/chippy/" class="project-card" data-category="robots">
+                    <img src="chippy/img/ChippyV3Pic.jpg" alt="Chippy">
+                    <div class="content">
+                        <h3>Chippy</h3>
+                    </div>
+                </a>
+                <a href="Walker/index.html" class="project-card" data-category="robots">
+                    <img src="Walker/img/Walker Thumbnail.png" alt="Walker">
+                    <div class="content">
+                        <h3>Walker</h3>
+                    </div>
+                </a>
+                <a class="project-card" data-category="robots">
+                    <img src="/projects/Snow Plow/img/Snow Plow Pic.jpg" alt="Snow Plow">
+                    <div class="content">
+                        <h3>Snow Plow</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-            <!-- Professional Projects Section -->
-            <section id="professional-projects">
-                <h2 class="section-title">Professional Projects</h2>
-                <div class="project-grid">
-                    <a href="project-megatron.html" class="project-card" data-category="professional">
-                        <img src="/experience/WHAM/img/Labview pic.png" alt="Labview Motor Controller">
-                        <div class="content">
-                            <h3>Labview Motor Controller</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
+        <!-- Professional Projects Section -->
+        <section id="professional-projects">
+            <h2 class="section-title">Professional Projects</h2>
+            <div class="project-grid">
+                <a class="project-card" data-category="professional">
+                    <img src="/experience/WHAM/img/Labview pic.png" alt="Labview Motor Controller">
+                    <div class="content">
+                        <h3>Labview Motor Controller</h3>
+                    </div>
+                </a>
+                <a class="project-card" data-category="professional">
+                    <img src="/experience/WHAM/img/Circuit pic.png" alt="NBI Buffer Amplifier">
+                    <div class="content">
+                        <h3>NBI Buffer Amplifier</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
 
-            <!-- Academia and Coursework Section -->
-            <section id="academia-and-coursework">
-                <h2 class="section-title">Academia and Coursework</h2>
-                <div class="project-grid">
-                    <a href="projects/Trash Collector/TrashCollector.html" class="project-card" data-category="academia">
-                        <img src="Trash Collector/img/Trash Thumbnail.png" alt="Trash Collector">
-                        <div class="content">
-                            <h3>Trash Collector</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </main>
+        <!-- Academia and Coursework Section -->
+        <section id="academia-and-coursework">
+            <h2 class="section-title">Academia and Coursework</h2>
+            <div class="project-grid">
+                <a class="project-card" data-category="academia">
+                    <img src="Trash Collector/img/Trash Thumbnail.png" alt="Trash Collector">
+                    <div class="content">
+                        <h3>Trash Collector</h3>
+                    </div>
+                </a>
+                <a class="project-card" data-category="academia">
+                    <img src="/projects/1001_bot/img/1001 bot thumbnail.png" alt="Ball Launcher">
+                    <div class="content">
+                        <h3>Ball Launcher</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
     </div>
-
 
     <script>
         // Filter functionality
@@ -110,9 +127,9 @@
                         const section = title.parentElement;
                         const visibleCards = section.querySelectorAll('.project-card[style*="display: block"]');
                         if (visibleCards.length === 0) {
-                            title.classList.add('hidden');
+                            title.style.display = 'none';
                         } else {
-                            title.classList.remove('hidden');
+                            title.style.display = 'block';
                         }
                     });
                 });

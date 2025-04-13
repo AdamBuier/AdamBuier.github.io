@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Adam Buier</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="/index.html" class="logo">Adam Buier</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/blog/" class="active">Blog</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/resume/">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="nhrl-content">
+        <div class="nhrl-blog-header">
+            <h2 class="nhrl-header">Latest Blog Posts</h2>
+        </div>
+        <div class="blog-grid" id="latest-blog-posts">
+            <!-- Blog posts will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulated blog data (replace with actual API or JSON file)
+            const blogPosts = [
+                {
+                    title: "Chippy NHRL April 2025 Recap",
+                    url: "/blog/April_NHRL_2025/",
+                    img: "/blog/April_NHRL_2025/img/AprilNHRLThumbnail.png",
+                    date: "April 11, 2025",
+                    tags: ["Chippy"]
+                }
+            ];
+
+            // Filter blog posts by "Chippy" tag
+            const chippyPosts = blogPosts.filter(post => post.tags.includes("Chippy"));
+
+            // Get the container for blog posts
+            const blogContainer = document.getElementById('latest-blog-posts');
+
+            // Generate HTML for each blog post
+            chippyPosts.forEach(post => {
+                const postElement = document.createElement('a');
+                postElement.href = post.url;
+                postElement.className = 'blog-card';
+                postElement.innerHTML = `
+                    <img src="${post.img}" alt="${post.title}">
+                    <div class="content">
+                        <h3>${post.title}</h3>
+                        <p>${post.date}</p>
+                    </div>
+                `;
+                blogContainer.appendChild(postElement);
+            });
+        });
+    </script>
+</body>
+</html>
