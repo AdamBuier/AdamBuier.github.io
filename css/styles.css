@@ -730,6 +730,18 @@ footer {
   height: 20%; /* Adjust the text container height */
 }
 
+/* Align the projects title and filter on the same line */
+.projects-header {
+  display: flex;
+  justify-content: space-between; /* Space between title and filter */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px;
+}
+
+.projects-header h1 {
+  margin: 0; /* Remove extra margin from the title */
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .container {
