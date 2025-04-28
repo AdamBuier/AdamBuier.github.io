@@ -120,28 +120,30 @@ footer {
 }
 
 /* Home Page */
-.carousel {
+.carousel-container {
   position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
   overflow: hidden;
-  margin: 40px 0;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-items {
+.carousel {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
   min-width: 100%;
-  position: relative;
+  flex-shrink: 0;
 }
 
 .carousel-item img {
   width: 100%;
   height: 400px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .carousel-caption {
@@ -183,6 +185,32 @@ footer {
 
 .carousel-nav button:hover {
   background: rgba(255,255,255,0.9);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Projects Page */
@@ -932,4 +960,81 @@ footer {
 .filter-options {
   display: flex;
   gap: 10px; /* Add spacing between filter buttons */
+}
+
+/* Side-by-Side Images */
+.side-by-side-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the images */
+    margin: 20px 0;
+}
+
+.side-image {
+    width: 50%; /* Adjust width to fit two images side by side */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Intro Text */
+.intro-text {
+  text-align: left; /* Align text to the left */
+  margin: 0 auto; /* Center the text block within its container */
+  max-width: 800px; /* Limit the width for better readability */
+  line-height: 1.6; /* Improve line spacing */
+  font-size: 1.1em; /* Adjust font size for readability */
+  color: #333; /* Set text color */
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Set a consistent height */
+    object-fit: cover; /* Ensure images are cropped proportionally */
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }

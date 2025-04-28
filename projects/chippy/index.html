@@ -20,6 +20,27 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Carousel Section -->
+    <section class="carousel-container">
+        <div class="carousel" id="image-carousel">
+            <div class="carousel-item">
+                <img src="/projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/projects/chippy/img/IMG_7442.JPG" alt="Chippy Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/blog/April_NHRL_2025/img/e0f92ff5-9cb9-4ef8-8763-f26905115669.png" alt="Chippy Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="/projects/chippy/img/2024-10-26 October NHRL WPI raw013.JPG" alt="Chippy Image 4">
+            </div>
+        </div>
+        <button class="carousel-button prev" id="prev-btn">&#10094;</button>
+        <button class="carousel-button next" id="next-btn">&#10095;</button>
+    </section>
+
     <section class="nhrl-content">
         <div class="nhrl-blog-header">
             <h2 class="nhrl-header">Latest Blog Posts</h2>
@@ -31,7 +52,39 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Simulated blog data (replace with actual API or JSON file)
+            // Carousel Logic
+            const carousel = document.getElementById('image-carousel');
+            const images = carousel.querySelectorAll('.carousel-item');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentIndex = 0;
+            const autoCycleInterval = 3000; // Time in milliseconds for auto-cycling
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100; // Calculate the offset for smooth sliding
+                carousel.style.transform = `translateX(${offset}%)`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+                updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+                updateCarousel();
+            });
+
+            // Auto-cycle through images
+            setInterval(() => {
+                currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+                updateCarousel();
+            }, autoCycleInterval);
+
+            // Initialize carousel
+            updateCarousel();
+
+            // Blog Posts Logic
             const blogPosts = [
                 {
                     title: "Chippy NHRL April 2025 Recap",
@@ -42,13 +95,9 @@
                 }
             ];
 
-            // Filter blog posts by "Chippy" tag
             const chippyPosts = blogPosts.filter(post => post.tags.includes("Chippy"));
-
-            // Get the container for blog posts
             const blogContainer = document.getElementById('latest-blog-posts');
 
-            // Generate HTML for each blog post
             chippyPosts.forEach(post => {
                 const postElement = document.createElement('a');
                 postElement.href = post.url;
