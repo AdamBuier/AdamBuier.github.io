@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collector Robot | Adam Buier</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="/index.html" class="logo">Adam Buier</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects/" class="active">Projects</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/resume/">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="nhrl-content">
+        <div class="nhrl-blog-header">
+            <h2 class="nhrl-title">Ball Launcher Robot</h2>
+            <p>RBE 1001 Project | Oct 2023 - Dec 2023</p>
+            <img src="/projects/1001_bot/img/1001 bot thumbnail.png" alt="Chippy V3" class="nhrl-hero-image">
+
+                <p class="hero-text">
+                    For my RBE 1001 class, a team and I were tasked with building an autonomous robot. This robot had to pick up colored balls, launch them through colored holes in a wall, and climb up a ramp. We competed against other classmates and placed 1st.
+                </p>    
+        </div>
+
+        <!-- Design Section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h3>Design</h3>
+                <p>
+                    The design for our robot used conveyor belts with flaps to lift and launch the balls. Additionally, we had a 4:1 gear ratio drive train which allowed us to climb the ramp.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sensors Section -->
+        <section class="side-by-side-images">
+            <img src="img/Side View.png" alt="Chippy vs Gallos12" class="side-image">
+            <img src="img/1001 sensors.png" alt="Gallos12 top plate" class="side-image">
+        </section>
+
+        <section class="hero-section">
+            <div class="hero-text">
+                <h3>Sensors</h3>
+                <p>
+                    Our robot utilized line sensors to know where to move, a vision sensor to align targets, an ultrasonic sensor to measure distances, and an inertial sensor to ensure accurate turns.
+                </p>
+            </div>
+        </section>
+
+        <!-- Programming Section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h3>Programming</h3>
+                <p>
+                    Our code utilized Python and VEX libraries in Visual Studio Code. We used state machines to manage autonomous and manual modes. We also used custom classes to use sensor data for navigation and object detection.
+                </p>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
