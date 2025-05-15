@@ -31,44 +31,12 @@
             </div>
         </div>
 
-        <div class="blog-grid">
-            <!-- Newest Blog Post -->
-            <a href="/blog/April_NHRL_2025/" class="blog-card blog-main" data-category="Chippy">
-                <img src="/blog/April_NHRL_2025/img/AprilNHRLThumbnail.png" alt="April NHRL">
-                <div class="content">
-                    <h3>Chippy NHRL April 2025 Recap</h3>
-                    <p>April 11, 2025</p>
-                </div>
-            </a>
+        <div class="blog-grid" id="blog-grid">
+            <!-- Blog posts will be dynamically loaded here -->
         </div>
     </div>
 
-    <script>
-        // Filter functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const blogCards = document.querySelectorAll('.blog-card');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.getAttribute('data-filter');
-
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-
-                    // Filter blog cards
-                    blogCards.forEach(card => {
-                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="/blog/blog.js"></script>
 
     <!-- Footer -->
     <footer>
