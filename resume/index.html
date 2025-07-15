@@ -1,100 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Adam Buier</title>
-    <link rel="stylesheet" href="/css/styles.css"> <!-- Link to your provided CSS file -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume | Adam Buier</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    body {
+      background: #fff; /* Changed from #000 to #fff */
+      font-family: 'Work Sans', 'Noto Sans', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .resume-card {
+      background: #fafafa;
+      border-radius: 24px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      max-width: 1200px;
+      margin: 120px auto 48px auto;
+      padding: 64px 48px 48px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    @media (max-width: 1200px) {
+      .resume-card {
+        max-width: 98vw;
+        padding: 32px 8vw 32px 8vw;
+        margin-top: 90px;
+      }
+    }
+    .resume-title {
+      font-family: 'Cal Sans', 'Work Sans', 'Noto Sans', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      line-height: 1.08;
+    }
+    .resume-section-title {
+      font-family: 'Cal Sans', 'Work Sans', 'Noto Sans', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #232323;
+      margin-bottom: 10px;
+      margin-top: 0px;
+      letter-spacing: 0.2px;
+    }
+    .resume-section-content {
+      font-size: 1.2rem;
+      color: #232323;
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+    .resume-btn {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      font-family: 'Cal Sans','Work Sans','Noto Sans',sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 12px 32px;
+      border-radius: 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      text-decoration: none;
+      margin-top: 8px;
+      margin-bottom: 24px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .resume-btn:hover {
+      background: #232323;
+      color: #fff;
+    }
+    .resume-list {
+      margin: 0 0 12px 0;
+      padding-left: 1.2em;
+    }
+    .resume-list li {
+      margin-bottom: 6px;
+    }
+    footer {
+      color: #bbb;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      margin-top: 32px;
+      font-family: 'Work Sans', 'Noto Sans', sans-serif;
+    }
+    /* Menu bar override for larger font */
+    .main-menu-overlay div[style*="display:flex"] a {
+      font-size: 1.7rem !important;
+      font-family: 'Cal Sans', 'Work Sans', 'Noto Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.5px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <a href="/index.html" class="logo">Adam Buier</a>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/resume/" class="active">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Menu Bar Overlay (fixed, blurred, matches home) -->
+  <nav class="main-menu-overlay" id="mainMenu"
+    style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+    
+    <!-- Wrap "Adam Buier" in an anchor tag -->
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+      Adam Buier
+    </a>
+    
+    <div style="display:flex;gap:32px;">
+      <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+      <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+      <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+      <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Resume Content -->
-    <section class="resume-content">
-        <div class="resume-header">
-            <h1>Resume</h1>
-            <p><a href="/resume/Adam_Buier_Resume.pdf" class="link" target="_blank">Download Resume (PDF)</a></p>
+  <!-- Resume Card -->
+  <main>
+    <div class="resume-card">
+      <div>
+        <div class="resume-title">Resume</div>
+        <a href="/resume/Adam_Buier_Resume.pdf" class="resume-btn" target="_blank">Download Resume (PDF)</a>
+      </div>
+
+      <section>
+        <div class="resume-section-title">Education</div>
+        <div class="resume-section-content">
+          <strong>Worcester Polytechnic Institute (WPI), Worcester, MA</strong> — <em>B.S. Mechanical Engineering, B.S. Robotic Engineering</em><br>
+          Graduation: May 2027 | GPA: 3.4/4.00
         </div>
+      </section>
 
-        <div class="resume-section">
-            <h2>Education</h2>
-            <p><strong>Worcester Polytechnic Institute (WPI), Worcester, MA</strong> — <em>B.S. Mechanical Engineering, B.S. Robotic Engineering</em></p>
-            <p>Graduation: May 2027 | GPA: 3.4/4.00</p>
+      <section>
+        <div class="resume-section-title">Experience</div>
+        <div class="resume-section-content">
+          <strong>Wisconsin HTS Axisymmetric Mirror, Engineering Intern</strong> — Madison, WI (May 2024 - Aug 2024)
+          <ul class="resume-list">
+            <li>Designed and implemented stepper motor systems for a neutron detection probe using LabVIEW and SolidWorks, documenting performance in high magnetic field environments and presenting results.</li>
+            <li>Rapidly prototyped a moisture detection switch using SolidWorks and 3D printing, improving cryogenic cooling system leak detection.</li>
+            <li>Machined and installed high-current transmission lines to meet GD&T standards with 0.001-inch tolerances for superconducting magnets.</li>
+          </ul>
+          <strong>Ma-Ka-Ja-Wan Scout Reservation, Director, Counselor</strong> — Pearson, WI (June 2019 - Aug 2023)
+          <ul class="resume-list">
+            <li>Led teams of 3-5 to develop and execute programs for campers aged 10-16, including axe throwing, raft building, and cooking events.</li>
+            <li>Coordinated service and ecological improvement projects which contributed to camp sustainability and community service efforts.</li>
+          </ul>
         </div>
+      </section>
 
-        <div class="resume-section">
-            <h2>Experience</h2>
-            <p><strong>Wisconsin HTS Axisymmetric Mirror, Engineering Intern</strong> — Madison, WI (May 2024 - Aug 2024)</p>
-            <ul>
-                <li>Designed and implemented stepper motor systems for a neutron detection probe using LabVIEW and SolidWorks, documenting performance in high magnetic field environments and presenting results.</li>
-                <li>Rapidly prototyped a moisture detection switch using SolidWorks and 3D printing, improving cryogenic cooling system leak detection.</li>
-                <li>Machined and installed high-current transmission lines to meet GD&T standards with 0.001-inch tolerances for superconducting magnets.</li>
-            </ul>
-            <p><strong>Ma-Ka-Ja-Wan Scout Reservation, Director, Counselor</strong> — Pearson, WI (June 2019 - Aug 2023)</p>
-            <ul>
-                <li>Led teams of 3-5 to develop and execute programs for campers aged 10-16, including axe throwing, raft building, and cooking events.</li>
-                <li>Coordinated service and ecological improvement projects which contributed to camp sustainability and community service efforts.</li>
-            </ul>
+      <section>
+        <div class="resume-section-title">Relevant Projects</div>
+        <div class="resume-section-content">
+          <strong>Combat Robot (BattleBots)</strong>
+          <ul class="resume-list">
+            <li>Designed, simulated, soldered, and built a 3lb combat robot using SolidWorks for 3D modeling and ANSYS for performance simulations.</li>
+            <li>Produced detailed engineering documentation, utilizing Fusion 360 for CAM and GD&T principles to align CNC-machined parts with 3D-printed components.</li>
+            <li>Earned a global ranking in the National Havoc Robot League (NHRL).</li>
+          </ul>
+          <strong>Autonomous Collector Robot</strong>
+          <ul class="resume-list">
+            <li>Designed and programmed an ESP32-based robotic system with sensors and computer vision for autonomous object collection, showcasing automation skills applicable to warehouse robotics.</li>
+            <li>Maintained thorough version control and detailed engineering documentation for all design processes.</li>
+          </ul>
+          <strong>Autonomous Walker</strong>
+          <ul class="resume-list">
+            <li>Engineered and programmed a 2-DOF walking robot to demonstrate efficient kinematics and coordinated motion.</li>
+            <li>Integrated precise motor control to maintain stability and traverse obstacles, enhancing capabilities for mobile robotic systems.</li>
+            <li>Created detailed CAD models and simulations, enabling rapid prototyping and iterative design improvements.</li>
+          </ul>
         </div>
+      </section>
 
-        <div class="resume-section">
-            <h2>Relevant Projects</h2>
-            <p><strong>Combat Robot (BattleBots)</strong></p>
-            <ul>
-                <li>Designed, simulated, soldered, and built a 3lb combat robot using SolidWorks for 3D modeling and ANSYS for performance simulations.</li>
-                <li>Produced detailed engineering documentation, utilizing Fusion 360 for CAM and GD&T principles to align CNC-machined parts with 3D-printed components.</li>
-                <li>Earned a global ranking in the National Havoc Robot League (NHRL).</li>
-            </ul>
-            <p><strong>Autonomous Collector Robot</strong></p>
-            <ul>
-                <li>Designed and programmed an ESP32-based robotic system with sensors and computer vision for autonomous object collection, showcasing automation skills applicable to warehouse robotics.</li>
-                <li>Maintained thorough version control and detailed engineering documentation for all design processes.</li>
-            </ul>
-            <p><strong>Autonomous Walker</strong></p>
-            <ul>
-                <li>Engineered and programmed a 2-DOF walking robot to demonstrate efficient kinematics and coordinated motion.</li>
-                <li>Integrated precise motor control to maintain stability and traverse obstacles, enhancing capabilities for mobile robotic systems.</li>
-                <li>Created detailed CAD models and simulations, enabling rapid prototyping and iterative design improvements.</li>
-            </ul>
+      <section>
+        <div class="resume-section-title">Skills</div>
+        <div class="resume-section-content">
+          <ul class="resume-list">
+            <li><strong>Engineering Tools:</strong> SolidWorks, Fusion 360, Onshape, ANSYS, KiCad</li>
+            <li><strong>Prototyping:</strong> Documentation, 3D Printing, Machining (Vertical Mill, Lathe), GD&T, Soldering, Welding</li>
+            <li><strong>Programming:</strong> LabVIEW, Python, Java, C, C++, HTML, MATLAB, ESP32, Arduino</li>
+            <li><strong>Other:</strong> Microsoft Office, Excel, Word, Outlook, PowerPoint, Workday, Google Docs, Sheets</li>
+          </ul>
         </div>
+      </section>
 
-        <div class="resume-section">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Engineering Tools:</strong> SolidWorks, Fusion 360, Onshape, ANSYS, KiCad</li>
-                <li><strong>Prototyping:</strong> Documentation, 3D Printing, Machining (Vertical Mill, Lathe), GD&T, Soldering, Welding</li>
-                <li><strong>Programming:</strong> LabVIEW, Python, Java, C, C++, HTML, MATLAB, ESP32, Arduino</li>
-                <li><strong>Other:</strong> Microsoft Office, Excel, Word, Outlook, PowerPoint, Workday, Google Docs, Sheets</li>
-            </ul>
+      <section>
+        <div class="resume-section-title">Activities</div>
+        <div class="resume-section-content">
+          <ul class="resume-list">
+            <li><strong>Eagle Scout:</strong> Boy Scouts of America</li>
+            <li><strong>Lab Monitor:</strong> Oversaw 3D printing and prototyping workflows at WPI Collab Lab</li>
+            <li><strong>Social Media Head:</strong> WPI Combat Robotics Team</li>
+            <li><strong>School Mascot Manager:</strong> WPI Student Alumni Society</li>
+            <li><strong>Member:</strong> American Society of Mechanical Engineers</li>
+          </ul>
         </div>
-
-        <div class="resume-section">
-            <h2>Activities</h2>
-            <ul>
-                <li><strong>Eagle Scout:</strong> Boy Scouts of America</li>
-                <li><strong>Lab Monitor:</strong> Oversaw 3D printing and prototyping workflows at WPI Collab Lab</li>
-                <li><strong>Social Media Head:</strong> WPI Combat Robotics Team</li>
-                <li><strong>School Mascot Manager:</strong> WPI Student Alumni Society</li>
-                <li><strong>Member:</strong> American Society of Mechanical Engineers</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Adam Buier. All rights reserved.</p>
-    </footer>
+      </section>
+    </div>
+    <script>
+            // Hide/show menu on scroll (menu is now fixed at top, so this still works)
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+      const menu = document.getElementById('mainMenu');
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 60) {
+              // Scrolling down, hide menu
+              menu.style.transform = 'translateY(-120%)';
+              menu.style.opacity = '0';
+            } else {
+              // Scrolling up, show menu
+              menu.style.transform = 'translateY(0)';
+              menu.style.opacity = '1';
+            }
+            lastScrollY = currentScrollY;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+    </script>
+  </main>
 </body>
 </html>

@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Adam Buier</title>
-    <link rel="stylesheet" href="../../css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chippy NHRL April 2025 | Adam Buier</title>
+
+  <!-- Match fonts and styles -->
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Link to your provided CSS file -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <a href="/index.html" class="logo">Adam Buier</a>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/blog/" class="active">Blog</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/resume/">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+      <nav class="main-menu-overlay" id="mainMenu"
+        style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+        
+        <!-- Wrap "Adam Buier" in an anchor tag -->
+        <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+          Adam Buier
+        </a>
+        
+        <div style="display:flex;gap:32px;">
+          <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+          <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+          <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+          <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+        </div>
+      </nav>
+
 
     <!-- Blog Content -->
+     <figure style="margin:0;height:100%;">
+        <img id="hero-image"
+          src="/blog/April_NHRL_2025/img/April_NHRL_Thumbnail.jpg"
+          alt="Chippy"
+          style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+        <div id="hero-blur-overlay"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;backdrop-filter:blur(0px);transition:backdrop-filter 1.2s, background 1.2s;z-index:2;">
+        </div>
+      </figure>
     <div class="nhrl-content">
         <div class="nhrl-blog-header">
-            <h1 class="nhrl-title">Chippy NHRL April 2025<br>Recap</h1>
-            <div class="nhrl-published">Published by Adam Buier on April 11, 2025</div>
-            <img src="/projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy V3" class="nhrl-hero-image">
+            <div class="nhrl-published">April 11, 2025</div>
+            <h1 class="nhrl-title">Chippy NHRL April 2025 Recap</h1>
         </div>
         <p class="nhrl-paragraph">Going into NHRL, I was excited to test out the new version of Chippy and destroy some electronics. My goal for this competition was to run Chippy into the ground and leave with it completely destroyed especially since it probably won’t fight again until 2026 due to scheduling conflicts.
         </p>
 
         <h3 class="nhrl-subheading">Fight 1: Gallos12</h3>
         <p class="nhrl-paragraph">My first match was against Gallos12, a veteran Fingertech beater bar that last competed in 2022. Chippy quickly ran into a couple of problems that would plague me for the rest of the competition:</p>
-        <ul class="nhrl-list">
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
             <li><strong>Blade kept getting stuck:</strong> As I alluded to in the version 3 breakdown, changing the weapon geometry didn’t prevent the blade from getting stuck. The geometry change and switching the battery to 5s allowed it to penetrate deeper into opponents, which probably made the issue worse. I got stuck twice, with the match ending after the bots needed to be unstuck a second time. While I wasn’t penalized directly for getting stuck, it hurt my control points.</li>
             <li><strong>Gear stripping:</strong> Switching to a nylon driving gear created a rough surface that wore away the TPU gear on the arm. During normal operation, the arm worked fine for the whole match. However, when I got stuck in Gallos12 and Till Death and tried to pull the blade out, it stripped the gear instantly. This meant I had to replace the TPU gear after every match.</li>
         </ul>
@@ -78,7 +101,7 @@
 
         <h3 class="nhrl-subheading">More Changes</h3>
         <p class="nhrl-paragraph">The biggest issues revolved around improving the weapon system and making it more reliable. I hope to solve this by:</p>
-        <ul class="nhrl-list">
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
             <li><b>Switching the arm gear to CF nylon:</b> This would greatly reduce the stripping on the gears and (hopefully) help me pull out of opponents better.</li>
             <li><strong>Designing my own hub motor:</strong> Mechanically, the <a href="https://justcuzrobotics.com/products/rdy-mini-5022-1700kv-antweight-hubmotor?srsltid=AfmBOooHR_NlDQBVWi9ouW_3MqizoC4bwv9XvxTVI3_WQ9lcFNBY-V-Y" target="_blank" rel="noopener noreferrer" class="link">
                 Just Cuz RDY-MINI-5022-V1 hub motor
@@ -88,16 +111,37 @@
             <li><strong>Changing weapon geometry:</strong> To fix getting stuck, I think adding a greater relief angle to the blade and switching the gear to CF nylon will help.</li>
         </ul>
         <p class="nhrl-paragraph">Aside from the weapon system, other changes I want to make include:</p>
-        <ul class="nhrl-list">
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
             <li><b>Increase screw hole tolerances:</b> My screw holes were too small and this made repairing the robot a nightmare because I could never get the plastites to go in. My screw holes were  0.07”, I will probably up that to 0.08” for the next version.</li>
             <li><b>Add more armor configurations:</b> After my fight against Big G, it was clear that I need a better way to counter beater bars that ride low to the ground. Lowering the angle on my forks might fix this, but it requires more testing. I also want to make a designated anti-flamethrower and anti-big-wheel configuration if I face them.</li>
             <li><b>Get good at driving:</b> Improving the wheels and switching the bot to run off 5s make Chippy drive much better and faster. However, I kept oversteering during matches and losing opportunities for pins. Hopefully before the next competition Chippy competes at I can do a lot of driving practice.  </li>
         </ul>
     </div>
-
-    <!-- Footer -->
-    <footer class="nhrl-footer">
-        <p class="nhrl-footer-text">&copy; 2025 Adam Buier. All rights reserved.</p>
-    </footer>
 </body>
+    <script>
+            // Hide/show menu on scroll (menu is now fixed at top, so this still works)
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+      const menu = document.getElementById('mainMenu');
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 60) {
+              // Scrolling down, hide menu
+              menu.style.transform = 'translateY(-120%)';
+              menu.style.opacity = '0';
+            } else {
+              // Scrolling up, show menu
+              menu.style.transform = 'translateY(0)';
+              menu.style.opacity = '1';
+            }
+            lastScrollY = currentScrollY;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+    </script>
 </html>

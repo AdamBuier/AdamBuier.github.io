@@ -1,72 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collector Robot | Adam Buier</title>
-    <link rel="stylesheet" href="../../css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autonomous Walker | Adam Buier</title>
+
+  <!-- Match fonts and styles -->
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Link to your provided CSS file -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <a href="/index.html" class="logo">Adam Buier</a>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/projects/" class="active">Projects</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/resume/">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-
+  <!-- Header -->
+      <nav class="main-menu-overlay" id="mainMenu"
+        style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+        
+        <!-- Wrap "Adam Buier" in an anchor tag -->
+        <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+          Adam Buier
+        </a>
+        
+        <div style="display:flex;gap:32px;">
+          <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+          <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+          <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+          <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+        </div>
+      </nav>
     <!-- Main Content -->
-    <section class="nhrl-content">
+     
+      <figure style="margin:0;height:100%;">
+        <img id="hero-image"
+          src="/projects\1001_bot\img\1001 thumbnail.png"
+          alt="Chippy"
+          style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+      </figure>
+    <div class="nhrl-content">
         <div class="nhrl-blog-header">
-            <h2 class="nhrl-title">Ball Launcher Robot</h2>
-            <p>RBE 1001 Project | Oct 2023 - Dec 2023</p>
-            <img src="/projects/1001_bot/img/1001 bot thumbnail.png" alt="Chippy V3" class="nhrl-hero-image">
 
-                <p class="hero-text">
-                    For my RBE 1001 class, a team and I were tasked with building an autonomous robot. This robot had to pick up colored balls, launch them through colored holes in a wall, and climb up a ramp. We competed against other classmates and placed 1st.
-                </p>    
+          <div class="nhrl-published">RBE 1001 Project | Oct 2023 - Dec 2023</div>  
+          <h1 class="nhrl-title">Autonomous Ball Launcher Robot</h1>
+            
+        <div class="nhrl-key-features">
+        <h3 class="nhrl-subheading">Highlights</h3>
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
+            <li>Autonomous ball collection and color-matching system</li>
+            <li>Vision and sensor-driven navigation</li>
+            <li>Ramp climbing with geared drivetrain</li>
+            <li>Modular Python codebase using VEX libraries</li>
+            <li>1st place in final class competition</li>
+        </ul>
+        </div>
+        </div>
+        <p class="nhrl-paragraph">As part of WPI’s RBE 1001 course, my team and I designed and built an autonomous robot capable of collecting colored balls, identifying matching targets, and launching the balls through color-coded holes. The robot also successfully navigated a ramp as part of the challenge. Our project placed 1st in a class-wide competition.
+        
+        <div>
+            <img src="/projects\1001_bot\img\1001 bot thumbnail.png" alt="Chippy vs Katana" class="nhrl-hero-image">
         </div>
 
         <!-- Design Section -->
-        <section class="hero-section">
-            <div class="hero-text">
-                <h3>Design</h3>
-                <p>
-                    The design for our robot used conveyor belts with flaps to lift and launch the balls. Additionally, we had a 4:1 gear ratio drive train which allowed us to climb the ramp.
-                </p>
-            </div>
-        </section>
+         <h3 class="nhrl-subheading">Design</h3>
+        <p class="nhrl-paragraph">We designed a dual-conveyor system with custom 3D-printed flaps to collect and elevate balls. The upper conveyor acted as the launch mechanism, precisely timed for accuracy. The drivetrain featured a 4:1 gear ratio for torque, enabling our robot to reliably climb the ramp obstacle under load.</p>
+
 
         <!-- Sensors Section -->
-        <section class="side-by-side-images">
-            <img src="img/Side View.png" alt="Chippy vs Gallos12" class="side-image">
-            <img src="img/1001 sensors.png" alt="Gallos12 top plate" class="side-image">
-        </section>
+        <div>
+            <img src="img/Side View.png" alt="Chippy vs Gallos12" class="nhrl-hero-image">
 
-        <section class="hero-section">
-            <div class="hero-text">
-                <h3>Sensors</h3>
-                <p>
-                    Our robot utilized line sensors to know where to move, a vision sensor to align targets, an ultrasonic sensor to measure distances, and an inertial sensor to ensure accurate turns.
-                </p>
-            </div>
-        </section>
+        </div>
 
-        <!-- Programming Section -->
-        <section class="hero-section">
-            <div class="hero-text">
-                <h3>Programming</h3>
-                <p>
-                    Our code utilized Python and VEX libraries in Visual Studio Code. We used state machines to manage autonomous and manual modes. We also used custom classes to use sensor data for navigation and object detection.
-                </p>
-            </div>
-        </section>
-    </section>
+        <h3 class="nhrl-subheading">Sensors</h3>
+        <p class="nhrl-paragraph">Our robot utilized line sensors to know where to move, a vision sensor to align targets, an ultrasonic sensor to measure distances, and an inertial sensor to ensure accurate turns.</p>
+
+        <div>
+          <img src="img/1001 sensors.png" alt="Gallos12 top plate" class="nhrl-hero-image">
+        </div>
+
+      <h3 class="nhrl-subheading">Programming</h3>
+        <p class="nhrl-paragraph">We programmed the robot using Python and the VEX Robotics API within Visual Studio Code. The system operated on a custom state machine architecture that transitioned between search, collection, aiming, and launch modes. Sensor feedback was modularized into reusable classes for clean navigation logic and target detection.</p>
+    <h3 class="nhrl-subheading">Reflection</h3>
+        <p class="nhrl-paragraph">
+        This project taught me the importance of integrating mechanical design, sensor feedback, and software logic early in the development process. I also gained hands-on experience with autonomous behavior sequencing and collaboration under tight deadlines. Our robot’s performance was a result of extensive iteration and system-level thinking.
+        </p>
+    <script>
+        let lastScrollY = window.scrollY;
+      let ticking = false;
+      const menu = document.getElementById('mainMenu');
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 60) {
+              // Scrolling down, hide menu
+              menu.style.transform = 'translateY(-120%)';
+              menu.style.opacity = '0';
+            } else {
+              // Scrolling up, show menu
+              menu.style.transform = 'translateY(0)';
+              menu.style.opacity = '1';
+            }
+            lastScrollY = currentScrollY;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+    </script>
 </body>
 </html>

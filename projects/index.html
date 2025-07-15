@@ -1,143 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Adam Buier</title>
-    <link rel="stylesheet" href="/css/styles.css"> <!-- Link to your provided CSS file -->
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Adam Buier</title>
+
+  <!-- Fonts and Styling -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900&display=swap"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <a href="/index.html" class="logo">Adam Buier</a>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/blog/" class="active">Blog</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/resume/">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <div class="projects-container">
-        <div class="projects-header">
-            <h1>Projects</h1>
-            <div class="filter-options">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="robots">Robots</button>
-                <button class="filter-btn" data-filter="professional">Professional Projects</button>
-                <button class="filter-btn" data-filter="academia">Academia</button>
-        </div>
+  <!-- Header -->
+  <nav class="main-menu-overlay" id="mainMenu"
+    style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+    
+    <!-- Wrap "Adam Buier" in an anchor tag -->
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+      Adam Buier
+    </a>
+    
+    <div style="display:flex;gap:32px;">
+      <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+      <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+      <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+      <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
     </div>
+  </nav>
 
-        <!-- Robots Section -->
-        <section id="robots">
-            <h2 class="section-title">Robots</h2>
-            <div class="project-grid">
-                <a href="/projects/chippy/" class="project-card" data-category="robots">
-                    <img src="chippy/img/ChippyV3Pic.jpg" alt="Chippy">
-                    <div class="content">
-                        <h3>Chippy</h3>
-                    </div>
-                </a>
-                <a href="Walker/index.html" class="project-card" data-category="robots">
-                    <img src="Walker/img/Walker Thumbnail.png" alt="Walker">
-                    <div class="content">
-                        <h3>Walker</h3>
-                    </div>
-                </a>
-                <a class="project-card" data-category="robots">
-                    <img src="/projects/Snow Plow/img/Snow Plow Pic.jpg" alt="Snow Plow">
-                    <div class="content">
-                        <h3>Snow Plow</h3>
-                    </div>
-                </a>
-            </div>
-        </section>
+  <!-- Main Content -->
+  <div class="projects-container">
+    <!-- Robots Section -->
+    <section>
+      <h2 class="section-title">Latest Projects</h2>
+      <div class="project-grid">
+        <a href="/projects/chippy/" class="project-card">
+        <img src="/projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy" />
+        <div class="content">Battle Bot</div>
+        </a>
+        <a href="/projects/Walker/" class="project-card">
+          <img src="/projects/Walker/img/Walker Thumbnail.png" alt="Walker" />
+          <div class="content">Walker</div>
+        </a>
+        <a href="/projects/trash_collector/" class="project-card">
+        <img src="/projects/Trash Collector/img/Trash Thumbnail.png" alt="trash collector" />
+        <div class="content">Autonomous Trash Collector</div>
+        </a>
+        </a>
+        <a href="/projects/1001_bot/" class="project-card">
+        <img src="/projects/1001_bot/img/1001 bot thumbnail.png" alt="1001 bot" />
+        <div class="content">Autonomous Ball Launcher</div>
+        </a>
+    </section>
+  </div>
+  <script>
+          let lastScrollY = window.scrollY;
+      let ticking = false;
+      const menu = document.getElementById('mainMenu');
 
-        <!-- Professional Projects Section -->
-        <section id="professional-projects">
-            <h2 class="section-title">Professional Projects</h2>
-            <div class="project-grid">
-                <a class="project-card" data-category="professional">
-                    <img src="/experience/WHAM/img/Labview pic.png" alt="Labview Motor Controller">
-                    <div class="content">
-                        <h3>Labview Motor Controller</h3>
-                    </div>
-                </a>
-                <a class="project-card" data-category="professional">
-                    <img src="/experience/WHAM/img/Circuit pic.png" alt="NBI Buffer Amplifier">
-                    <div class="content">
-                        <h3>NBI Buffer Amplifier</h3>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Academia and Coursework Section -->
-        <section id="academia-and-coursework">
-            <h2 class="section-title">Academia and Coursework</h2>
-            <div class="project-grid">
-                <a class="project-card" data-category="academia">
-                    <img src="Trash Collector/img/Trash Thumbnail.png" alt="Trash Collector">
-                    <div class="content">
-                        <h3>Trash Collector</h3>
-                    </div>
-                </a>
-                <a href="/projects/1001_bot/index.html" class="project-card" data-category="academia">
-                    <img src="/projects/1001_bot/img/1001 bot thumbnail.png" alt="Ball Launcher">
-                    <div class="content">
-                        <h3>Ball Launcher</h3>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </div>
-
-    <script>
-        // Filter functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
-            const sectionTitles = document.querySelectorAll('.section-title');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.getAttribute('data-filter');
-
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-
-                    // Filter project cards
-                    projectCards.forEach(card => {
-                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-
-                    // Hide section titles if no cards are visible
-                    sectionTitles.forEach(title => {
-                        const section = title.parentElement;
-                        const visibleCards = section.querySelectorAll('.project-card[style*="display: block"]');
-                        if (visibleCards.length === 0) {
-                            title.style.display = 'none';
-                        } else {
-                            title.style.display = 'block';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-        <footer>
-            <p>&copy; 2025 Adam Buier. All rights reserved.</p>
-        </footer>
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 60) {
+              // Scrolling down, hide menu
+              menu.style.transform = 'translateY(-120%)';
+              menu.style.opacity = '0';
+            } else {
+              // Scrolling up, show menu
+              menu.style.transform = 'translateY(0)';
+              menu.style.opacity = '1';
+            }
+            lastScrollY = currentScrollY;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+  </script>
 </body>
 </html>
