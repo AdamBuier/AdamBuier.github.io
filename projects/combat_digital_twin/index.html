@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combat Robotics Digital Twin | Adam Buier</title>
+
+  <!-- Match fonts and styles -->
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Link to your provided CSS file -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<!-- HEAD remains unchanged -->
+<!-- BODY -->
+<body>
+  <!-- Header Navigation -->
+  <nav class="main-menu-overlay" id="mainMenu"
+    style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+      Adam Buier
+    </a>
+    <div style="display:flex;gap:32px;">
+      <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+      <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+      <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+      <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Image -->
+  <figure style="margin:0;height:100%;">
+    <img id="hero-image"
+      src="/projects\combat_digital_twin\img\cr_digital_twin_thumbnail.png"
+      alt="Walker robot"
+      style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+  </figure>
+
+  <!-- Main Content -->
+  <div class="nhrl-content">
+    <div class="nhrl-blog-header">
+      <div class="nhrl-published">June 2025 - Current</div>  
+      <h1 class="nhrl-title">Combat Robotics Digital Twin</h1>
+      <div class="swiper mySwiper" style="margin-top: 1rem; max-width: 800px; height: 500px; position: relative;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/projects\combat_digital_twin\img\Screenshot 2025-07-20 163212.png" alt="Chippy V3"
+                style="width:100%; height:100%; object-fit:cover; border-radius: 12px;" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/projects\combat_digital_twin\img\Screenshot 2025-07-19 213717.png" alt="Chippy Top"
+                style="width:100%; height:100%; object-fit:cover; border-radius: 12px;" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/projects\combat_digital_twin\img\Screenshot 2025-07-13 130119.png" alt="Chippy Top"
+                style="width:100%; height:100%; object-fit:cover; border-radius: 12px;" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/blog\combat_sim\emburn_drive_test\img\Screenshot 2025-08-05 011711.png" alt="Chippy Top"
+                style="width:100%; height:100%; object-fit:cover; border-radius: 12px;" />
+          </div>
+        </div>
+
+        <!-- Pagination and Arrows -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" style="color:white;"></div>
+        <div class="swiper-button-next" style="color:white;"></div>
+      </div>
+      <div class="nhrl-key-features">
+        <h3 class="nhrl-subheading">Highlights</h3>
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
+          <li>Designed and built a legged robot</li>
+          <li>Custom CAD modeled with kinematics calculated in MATLAB</li>
+          <li>Used brushless motors with Arduino-based control</li>
+          <li>Built and tested early prototypes using 3D-printed parts</li>
+          <li>Troubleshot motor PWM control due to lack of documentation</li>
+          <li>Learned about mechanical failure and design limitations through real-world testing</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="nhrl-subheading">Overview</h3>
+    <p class="nhrl-paragraph">
+      I had the idea of building a walker after taking RBE 2002, where we used sensors to make a robot autonomously collect and deliver trash. I joked, “Imagine if the robot had legs,” and the idea stuck. During the final week of the semester, I decided to bring the idea to life using electronics I had on hand and an Arduino Leonardo I borrowed from my professor.
+    </p>
+
+    <h3 class="nhrl-subheading">Design</h3>
+    <p class="nhrl-paragraph">
+      The walker design was inspired by a combat robot called <a href="https://wiki.nhrl.io/wiki/index.php/Pawsitively_Hissterical" target="_blank" rel="noopener noreferrer" class="link">
+                Pawsitively Hissterical
+            </a>, which uses a single motor and a system of linkages to drive its legs. Based on that idea, I created a custom version in CAD and used two brushless <a href="https://repeat-robotics.com/buy/repeat-compact-1806/" target="_blank" rel="noopener noreferrer" class="link">
+                Repeat Compact motors
+            </a>I had available. The motors were controlled by speed controllers hooked up to an Arduino Leonardo, which included an onboard IMU, gyroscope, accelerometer, and a line sensor. I validated the linkage motion in MATLAB before completing the design in Onshape.
+    </p>
+    <img src="/projects\combat_digital_twin\img\Screenshot 2025-07-20 163212.png" alt="Walker CAD" class="nhrl-hero-image">
+
+    
+  </div>
+ <script>
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const menu = document.getElementById('mainMenu');
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > lastScrollY && currentScrollY > 60) {
+            menu.style.transform = 'translateY(-120%)';
+            menu.style.opacity = '0';
+          } else {
+            menu.style.transform = 'translateY(0)';
+            menu.style.opacity = '1';
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 16,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      slidesPerView: 1,
+    });
+  </script>
+</body>
+
+</html>

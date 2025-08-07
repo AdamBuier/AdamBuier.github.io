@@ -17,29 +17,142 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
+<!-- HEAD remains unchanged -->
+<!-- BODY -->
 <body>
-  <!-- Header -->
-      <nav class="main-menu-overlay" id="mainMenu"
-        style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
-        
-        <!-- Wrap "Adam Buier" in an anchor tag -->
-        <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
-          Adam Buier
-        </a>
-        
-        <div style="display:flex;gap:32px;">
-          <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
-          <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
-          <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
-          <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
-        </div>
-      </nav>
-      <figure style="margin:0;height:100%;">
-        <img id="hero-image"
-          src="/projects/Walker/img/Walker Thumbnail.png"
-          alt="Chippy"
-          style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+  <!-- Header Navigation -->
+  <nav class="main-menu-overlay" id="mainMenu"
+    style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+      Adam Buier
+    </a>
+    <div style="display:flex;gap:32px;">
+      <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+      <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+      <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+      <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+    </div>
+  </nav>
 
-      </figure>
+  <!-- Hero Image -->
+  <figure style="margin:0;height:100%;">
+    <img id="hero-image"
+      src="/projects/Walker/img/IMG_0182.jpg"
+      alt="Walker robot"
+      style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+  </figure>
+
+  <!-- Main Content -->
+  <div class="nhrl-content">
+    <div class="nhrl-blog-header">
+      <div class="nhrl-published">RBE 2002 Side Project | Oct 2024 - Dec 2024</div>  
+      <h1 class="nhrl-title">Walker</h1>
+
+      <div class="nhrl-key-features">
+        <h3 class="nhrl-subheading">Highlights</h3>
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
+          <li>Designed and built a legged robot</li>
+          <li>Custom CAD modeled with kinematics calculated in MATLAB</li>
+          <li>Used brushless motors with Arduino-based control</li>
+          <li>Built and tested early prototypes using 3D-printed parts</li>
+          <li>Troubleshot motor PWM control due to lack of documentation</li>
+          <li>Learned about mechanical failure and design limitations through real-world testing</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="nhrl-subheading">Overview</h3>
+    <p class="nhrl-paragraph">
+      I had the idea of building a walker after taking RBE 2002, where we used sensors to make a robot autonomously collect and deliver trash. I joked, “Imagine if the robot had legs,” and the idea stuck. During the final week of the semester, I decided to bring the idea to life using electronics I had on hand and an Arduino Leonardo I borrowed from my professor.
+    </p>
+
+    <h3 class="nhrl-subheading">Design</h3>
+    <p class="nhrl-paragraph">
+      The walker design was inspired by a combat robot called <a href="https://wiki.nhrl.io/wiki/index.php/Pawsitively_Hissterical" target="_blank" rel="noopener noreferrer" class="link">
+                Pawsitively Hissterical
+            </a>, which uses a single motor and a system of linkages to drive its legs. Based on that idea, I created a custom version in CAD and used two brushless <a href="https://repeat-robotics.com/buy/repeat-compact-1806/" target="_blank" rel="noopener noreferrer" class="link">
+                Repeat Compact motors
+            </a>I had available. The motors were controlled by speed controllers hooked up to an Arduino Leonardo, which included an onboard IMU, gyroscope, accelerometer, and a line sensor. I validated the linkage motion in MATLAB before completing the design in Onshape.
+    </p>
+    <img src="/projects/Walker/img/Walker CAD.png" alt="Walker CAD" class="nhrl-hero-image">
+
+    <h3 class="nhrl-subheading">Code</h3>
+    <p class="nhrl-paragraph">
+      The robot was programmed using the Arduino IDE. Unfortunately, the manufacturer of the Repeat Compacts didn’t provide specs for the PWM range, so I had to manually determine it by creating custom timing clocks — a workaround that would later cause problems.
+    </p>
+
+    <h3 class="nhrl-subheading">Initial Testing</h3>
+    <p class="nhrl-paragraph">
+      Once the design and basic code were complete, I tested one side of the legs — and to my surprise, it worked flawlessly.
+    </p>
+    <video controls class="nhrl-hero-image" preload="metadata">
+      <source src="/projects/Walker/img/IMG_0177.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h3 class="nhrl-subheading">Assembly</h3>
+    <p class="nhrl-paragraph">
+      After the successful test, I 3D-printed the rest of the robot and prepared it for full assembly.
+    </p>
+    <img src="/projects/Walker/img/Walker Thumbnail.png" alt="Walker Robot" class="nhrl-hero-image">
+
+    <h3 class="nhrl-subheading">Complications</h3>
+    <p class="nhrl-paragraph">
+      Unfortunately, the walker couldn’t move when fully assembled — the motors didn’t produce enough torque. Around this time, the school quarter ended, so I brought the robot home to continue testing. However, I had far fewer resources at home, so I couldn’t easily replace broken parts.
+    </p>
+
+    <h3 class="nhrl-subheading">The Walker's Demise</h3>
+    <p class="nhrl-paragraph">
+      I had some stronger motors at home and swapped them in, but I forgot that their PWM range was different. When I powered on the robot, it immediately ran at full speed and tore itself apart. With limited resources and the need to return the borrowed Arduino Leonardo, that was sadly it for the walker.
+    </p>
+    <img src="/projects/Walker/img/IMG_0224.jpg" alt="Broken Walker" class="nhrl-hero-image">
+
+    <h3 class="nhrl-subheading">Future Considerations</h3>
+    <p class="nhrl-paragraph">
+      If I revisit this project, I’d use motors with documented PWM specs, a smaller Arduino to reduce size, and reinforce the frame to improve durability. It was a great learning experience in prototyping, system integration, and design iteration.
+    </p>
+  </div>
+   <script>
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const menu = document.getElementById('mainMenu');
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > lastScrollY && currentScrollY > 60) {
+            menu.style.transform = 'translateY(-120%)';
+            menu.style.opacity = '0';
+          } else {
+            menu.style.transform = 'translateY(0)';
+            menu.style.opacity = '1';
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 16,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      slidesPerView: 1,
+    });
+  </script>
 </body>
+
 </html>
