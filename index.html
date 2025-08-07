@@ -48,79 +48,119 @@
       <div class="titles-wrapper loaded"
         style="position:absolute;bottom:60px;left:0;height:auto;width:480px;max-width:60vw;z-index:5;display:flex;flex-direction:column;gap:0;">
         <div style="display:flex;flex-direction:column;gap:2px;">
-          <a href="/projects/chippy/" class="hero-title active"
+
+          <a href="/projects\combat_digital_twin\" class="hero-title active"
+            data-img="/projects\combat_digital_twin\img\chippy impact test 6 - Made with Clipchamp.mp4"
+            style="color:#fff;text-decoration:none;font-size:2.5rem;font-weight:700;padding:14px 48px 14px 60px;transition:background 0.2s, color 0.2s;font-family:'Work Sans', 'Noto Sans', sans-serif;background:transparent;">
+            Combat Robotics Digital Twin
+          </a>
+          <a href="/projects/chippy/" class="hero-title"
             data-img="projects\chippy\img\ChippyV3Pic.jpg"
             style="color:#fff;text-decoration:none;font-size:2.5rem;font-weight:700;padding:14px 48px 14px 60px;transition:background 0.2s, color 0.2s;font-family:'Work Sans', 'Noto Sans', sans-serif;background:transparent;">
-            Battle Bot 
+            Chippy 
           </a>
           <a href="/projects/Walker/" class="hero-title"
             data-img="projects\Walker\img\Walker Thumbnail.png"
             style="color:#fff;text-decoration:none;font-size:2.5rem;font-weight:700;padding:14px 48px 14px 60px;transition:background 0.2s, color 0.2s;font-family:'Work Sans', 'Noto Sans', sans-serif;background:transparent;">
             Walker 
           </a>
-          <a href="/projects/trash_collector/" class="hero-title"
+          <a class="hero-title"
             data-img="projects\Trash Collector\img\Trash Thumbnail.png"
             style="color:#fff;text-decoration:none;font-size:2.5rem;font-weight:700;padding:14px 48px 14px 60px;transition:background 0.2s, color 0.2s;font-family:'Work Sans', 'Noto Sans', sans-serif;background:transparent;">
             Autonomous Trash Collector 
-          </a>
-          <a href="/projects/1001_bot/" class="hero-title"
-            data-img="projects\1001_bot\img\1001 thumbnail.png"
-            style="color:#fff;text-decoration:none;font-size:2.5rem;font-weight:700;padding:14px 48px 14px 60px;transition:background 0.2s, color 0.2s;font-family:'Work Sans', 'Noto Sans', sans-serif;background:transparent;">
-            Autonomous Ball Launcher
-          </a>
-          <a href="https://a24films.com/films/the-smashing-machine" class="hero-title"
-            data-img="projects\Snow Plow\img\Snow Plow Pic.jpg"
-            style="color:#fff;text-decoration:none;font-size:2.5rem;font-weight:700;padding:14px 48px 14px 60px;transition:background 0.2s, color 0.2s;font-family:'Work Sans', 'Noto Sans', sans-serif;background:transparent;">
-            Snow Plow 
           </a>
         </div>
       </div>
     </div>
     <script>
-      // filepath: index.html
       const heroTitles = document.querySelectorAll('.hero-title');
-      const heroImage = document.getElementById('hero-image');
+      let heroImage = document.getElementById('hero-image'); // dynamic ref (may get replaced)
       const blurOverlay = document.getElementById('hero-blur-overlay');
       let loading = false;
-      let pendingTitle = null; // Track if a new hover happens during transition
+      let pendingTitle = null;
 
       function handleTitleHover(el) {
         heroTitles.forEach(t => t.classList.remove('active'));
         el.classList.add('active');
 
-        // Start with blur and zoomed-in image
-        heroImage.style.transition = "none";
-        heroImage.style.filter = "blur(32px)";
-        heroImage.style.transform = "scale(1.08)";
-
-        // Force reflow to apply the initial state before transitioning
-        void heroImage.offsetWidth;
-
-        // Now transition to sharp and normal size
-        heroImage.style.transition = "transform 1.6s cubic-bezier(0.4,0,0.2,1), filter 1s cubic-bezier(0.4,0,0.2,1)";
-        heroImage.style.filter = "blur(0px)";
-        heroImage.style.transform = "scale(1)";
+        const src = el.dataset.img;
+        const isVideo = src.endsWith('.mp4');
+        const parent = heroImage.parentNode;
 
         loading = true;
 
-        // Preload image
-        const newImg = new window.Image();
-        newImg.src = el.dataset.img;
-        newImg.onload = () => {
-          heroImage.src = el.dataset.img;
-          setTimeout(() => {
+        if (isVideo) {
+          // Create and preload video
+          const video = document.createElement('video');
+          video.autoplay = true;
+          video.loop = true;
+          video.muted = true;
+          video.playsInline = true;
+          video.style.width = '100%';
+          video.style.height = '100%';
+          video.style.objectFit = 'cover';
+          video.style.transition = "transform 1.6s cubic-bezier(0.4,0,0.2,1), filter 1s cubic-bezier(0.4,0,0.2,1)";
+          video.style.filter = "blur(32px)";
+          video.style.transform = "scale(1.08)";
+          video.id = 'hero-image';
+
+          const source = document.createElement('source');
+          source.src = src;
+          source.type = 'video/mp4';
+          video.appendChild(source);
+
+          video.onloadeddata = () => {
+            parent.replaceChild(video, heroImage);
+            heroImage = video; // update global reference
+            setTimeout(() => {
+              video.style.filter = "blur(0px)";
+              video.style.transform = "scale(1)";
+            }, 50);
+
             loading = false;
             if (pendingTitle) {
               const next = pendingTitle;
               pendingTitle = null;
               handleTitleHover(next);
             }
-          }, 1600);
-        };
+          };
+
+        } else {
+          // Preload and switch image
+          const newImg = new window.Image();
+          newImg.src = src;
+          newImg.onload = () => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = 'Preview';
+            img.id = 'hero-image';
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            img.style.transition = "transform 1.6s cubic-bezier(0.4,0,0.2,1), filter 1s cubic-bezier(0.4,0,0.2,1)";
+            img.style.filter = "blur(32px)";
+            img.style.transform = "scale(1.08)";
+
+            parent.replaceChild(img, heroImage);
+            heroImage = img; // update global reference
+
+            setTimeout(() => {
+              img.style.filter = "blur(0px)";
+              img.style.transform = "scale(1)";
+            }, 50);
+
+            loading = false;
+            if (pendingTitle) {
+              const next = pendingTitle;
+              pendingTitle = null;
+              handleTitleHover(next);
+            }
+          };
+        }
       }
 
       heroTitles.forEach(el => {
-        el.addEventListener('mouseenter', function(e) {
+        el.addEventListener('mouseenter', function () {
           if (loading) {
             pendingTitle = this;
             return;
@@ -129,7 +169,7 @@
         });
       });
 
-      // Hide/show menu on scroll (menu is now fixed at top, so this still works)
+      // Scroll behavior (unchanged)
       let lastScrollY = window.scrollY;
       let ticking = false;
       const menu = document.getElementById('mainMenu');
@@ -139,11 +179,9 @@
           window.requestAnimationFrame(() => {
             const currentScrollY = window.scrollY;
             if (currentScrollY > lastScrollY && currentScrollY > 60) {
-              // Scrolling down, hide menu
               menu.style.transform = 'translateY(-120%)';
               menu.style.opacity = '0';
             } else {
-              // Scrolling up, show menu
               menu.style.transform = 'translateY(0)';
               menu.style.opacity = '1';
             }
@@ -153,8 +191,11 @@
           ticking = true;
         }
       }
+
       window.addEventListener('scroll', onScroll);
     </script>
+
+
         <!-- View More Projects Button (now below projects, above About Me) -->
     <div id="view-more-projects-bar" style="width:100%;display:flex;justify-content:center;align-items:center;margin:48px 0 0 0;">
       <a href="/projects/"
