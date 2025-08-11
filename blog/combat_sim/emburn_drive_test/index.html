@@ -54,7 +54,7 @@
         </p>
         <p class="nhrl-paragraph">Recently, a conversation sparked in the Team WPI Discord about whether Emburn should switch from two-wheel to four-wheel drive. The current two-wheel setup places the wheels far to the rear, which makes the bot struggle with traction, especially since it has such a long frame. Adding two more wheels could solve that problem, but it also adds weight that could be used in other parts of the bot.
         </p>
-        <p class="nhrl-paragraph">In most combat robots, decisions regarding traction and drive performance are based mostly on vibes and aren’t confirmed until the bot is built and tested. That’s exactly the kind of guesswork I’m trying to eliminate using the digital twin I developed using Nvidia's IsaacSim to simulate real-world performance in combat robots. (If you're curious about how it works, you can read more about it <a href="/projects\combat_digital_twin\index.html" target="_blank" rel="noopener noreferrer" class="link">
+        <p class="nhrl-paragraph">In most combat robots, decisions regarding traction and drive performance are based mostly on vibes and aren’t confirmed until the bot is built and tested. That’s exactly the kind of guesswork I’m trying to eliminate using the digital twin I developed. It uses Nvidia's IsaacSim to simulate how real-world physics apply to combat robots. (If you're curious about how it works, you can read more about it <a href="/projects\combat_digital_twin\index.html" target="_blank" rel="noopener noreferrer" class="link">
                 here</a>.)
         </p>
         <img src="/blog\combat_sim\emburn_drive_test\img\Screenshot 2025-08-05 235647.png" alt="Telbot" class="nhrl-hero-image">
@@ -68,7 +68,7 @@
             <li><strong>Technical side rant incoming</strong> 
                 <p class="nhrl-paragraph">This feature sucks and is a pain to use. It works okay for simple assemblies, but if your design has a lot of parts, like Emburn, it will have issues importing. I ran into all sorts of issues getting IsaacSim to even load the full assembly. And once it did, the constraints were wrong, and parts were floating or misaligned. You can’t rely on fixed joints; you have to use Onshape’s Group feature to make parts fix properly. Also, the resulting prim paths in IsaacSim are messy compared to what SolidWorks gives you. If you have access to SolidWorks, just use that.</p></li>
         </ul>
-        <p class="nhrl-paragraph">Eventually, I got this bad boy imported and configured. I updated a Python controller script I had written to let me drive the bot using my keyboard and created a GUI to adjust the drive speed. With that everything was ready to go for testing.</p>
+        <p class="nhrl-paragraph">Eventually, I got this bad boy imported and configured. I updated a Python controller script I had written to let me drive the bot using my keyboard, and created a GUI to adjust the drive speed. With that everything was ready to go for testing.</p>
 
         <h3 class="nhrl-subheading">Testing Time</h3>
         <div class="nhrl-paragraph">
