@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Adam Buier</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900&display=swap"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <style>
+    /* Centering logic while keeping Projects Page Aesthetic */
+    .contact-page-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding:  80px 80px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 60px;
+    }
+
+    /* Card styling consistent with Project Cards but centered */
+    .contact-card-custom {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #eee;
+    }
+
+    .contact-card-custom:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .contact-icon-bg {
+      width: 100%;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f4f6;
+      transition: background 0.3s ease;
+    }
+
+    .contact-card-custom:hover .contact-icon-bg {
+      background: #e5e7eb;
+    }
+
+    .contact-text-area {
+      padding: 32px;
+      font-family: 'Work Sans', 'Noto Sans', sans-serif;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body style="background-color: #fafafa; margin: 0;">
+
+  <nav class="main-menu-overlay" id="mainMenu"
+    style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+    
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+      Adam Buier
+    </a>
+    
+    <div style="display:flex;gap:32px;">
+      <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+      <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+      <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+      <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+    </div>
+  </nav>
+
+  <div class="contact-page-container">
+    <h2 class="section-title">Connect</h2>
+    <div class="contact-grid">
+      
+      <a href="mailto:adambuier09@gmail.com" class="contact-card-custom">
+        <div class="contact-icon-bg">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <div class="contact-text-area">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #111; margin-bottom: 4px;">Email</div>
+          <div style="font-size: 1.1rem; color: #666;">adambuier09@gmail.com</div>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/adam-buier/" target="_blank" class="contact-card-custom">
+        <div class="contact-icon-bg">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#0077b5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </div>
+        <div class="contact-text-area">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #111; margin-bottom: 4px;">LinkedIn</div>
+          <div style="font-size: 1.1rem; color: #666;">View Professional Profile</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    // Scroll behavior script (Same as Template)
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const menu = document.getElementById('mainMenu');
+
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > lastScrollY && currentScrollY > 60) {
+            menu.style.transform = 'translateY(-120%)';
+            menu.style.opacity = '0';
+          } else {
+            menu.style.transform = 'translateY(0)';
+            menu.style.opacity = '1';
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+  </script>
+</body>
+</html>

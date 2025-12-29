@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAK STEM Kit | Adam Buier</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <style>
+    /* Carousel Styling to match your Chippy project */
+    .mySwiper { margin: 2rem auto; width: 100%; max-width: 1000px; padding-bottom: 50px; }
+    .swiper-slide { opacity: 0.4; transform: scale(0.85); transition: 0.4s cubic-bezier(.4,0,.2,1); }
+    .swiper-slide-active { opacity: 1; transform: scale(1); }
+    .swiper-slide img { width: 100%; height: 500px; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .swiper-pagination-bullet-active { background: #fff !important; width: 24px !important; border-radius: 4px !important; }
+    .nav-btn { color: #fff !important; background: rgba(0,0,0,0.3); width: 40px !important; height: 40px !important; border-radius: 50%; }
+    .nav-btn::after { font-size: 18px !important; }
+  </style>
+</head>
+
+<body>
+  <nav class="main-menu-overlay" id="mainMenu"
+    style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+      Adam Buier
+    </a>
+    <div style="display:flex;gap:32px;">
+      <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+      <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+      <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+      <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+    </div>
+  </nav>
+
+  <figure style="margin:0;height:100%;">
+    <img id="hero-image"
+      src="/projects/YAK robot/img/IMG_3054.jpg" 
+      alt="YAK STEM Kit Field Work"
+      style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+  </figure>
+
+  <div class="nhrl-content">
+    <div class="nhrl-blog-header">
+      <div class="nhrl-published">Nepal Study Abroad | Oct 2025 - Dec 2025</div>  
+      <h1 class="nhrl-title">YAK STEM Kit: Scaling Robotics in Nepal</h1>
+
+      <div class="nhrl-key-features">
+        <h3 class="nhrl-subheading">Project Goals</h3>
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
+          <li><strong>Evaluate Effectiveness:</strong> Assessed OLE Nepal’s current grade 6-8 robotics program outcomes.</li>
+          <li><strong>Identify Success Factors:</strong> Determined key elements for a scalable STEM curriculum through teacher feedback.</li>
+          <li><strong>Design Affordable Solutions:</strong> Created interactive modules using locally sourced, low-cost hardware.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="nhrl-subheading">Education in Nepal</h3>
+    <p class="nhrl-paragraph">
+      Geography and socioeconomic class have a significant impact on educational outcomes for students in Nepal. The gap between rural and urban areas are particularly pronounced for foundational numeracy skills. Additionally, the national "Secondary Education Examination" (SEE) often prioritizes rote memorization, leaving students ill-equipped for the critical thinking required in modern STEM careers. Educational initiatives that promote creative thinking have an important role in strengthening the skills of Nepali students.
+    </p>
+
+    <h3 class="nhrl-subheading">Partnering with Open Learning Exchange (OLE) Nepal</h3>
+    <p class="nhrl-paragraph">
+      Open Learning Exchange Nepal (OLE Nepal) integrates technology to reduce geographic disparity in education. While their robotics program provides hands-on learning, its scalability is limited by the $400 unit price of imported Artec kits. Our mission was to evaluate their existing successes and develop a replacement model that maintains high educational standards at a fraction of the cost.
+    </p>
+
+    <h3 class="nhrl-subheading">Evaluating the Existing Program</h3>
+    <p class="nhrl-paragraph">
+      We conducted 4 school visits and worked with 56 students to measure the current curriculum's impact. Overall, the program successfully taught STEM concepts, with <strong>74% of students</strong> who initially struggled showing mastery by the end of the module. However, we identified that large group sizes (up to 8 students per kit) led to disengagement. This reinforced the need for more affordable kits that allow for smaller student-to-robot ratios.
+    </p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0;">
+        <div style="text-align:center;">
+          <img src="/projects/YAK robot/img/olegraph.png" alt="Mastery Chart" style="width:100%; height:250px; object-fit:contain; background:#f4f4f4; border-radius:8px;">
+          <p style="font-size:0.8rem; font-style:italic; color:#666; margin-top:8px;">Figure: Mastery rates of STEM concepts before and after modules.</p>
+        </div>
+        <div style="text-align:center;">
+          <img src="/projects/YAK robot/img/yak test pic.jpg" alt="Classroom Observation" style="width:100%; height:250px; object-fit:cover; background:#f4f4f4; border-radius:8px;">
+          <p style="font-size:0.8rem; font-style:italic; color:#666; margin-top:8px;">Figure: Observing student engagement and teamwork during field testing.</p>
+        </div>
+    </div>
+    
+    <h3 class="nhrl-subheading">Developing a New STEM Model</h3>
+    <p class="nhrl-paragraph">
+      Based on our research, we developed a new model for STEM education that prioritizes local sourcing and creative problem solving. We cataloged Kathmandu’s local electronics markets and interviewed eight educators to ensure our curriculum was adaptable to rural contexts. To ensure effectiveness, we tested our new modules in 4 different schools, gathering direct feedback on usability and student engagement. Our solution includes two distinct modules and a new hardware platform:
+    </p>
+
+    <h3 class="nhrl-subheading">Mechanical Arm Module</h3>
+    <p class="nhrl-paragraph">
+      The mechanical arm module is a model for how STEM education can be made accessible to students that live in areas without access to specialized resources (e.g. Arduinos, DC motors, etc.). Using cheap and universally available materials (e.g. cardboard, water bottles, tape, etc.) allows our module to be used in a variety of contexts regardless of resource level. 
+    </p>
+        <div class="swiper mySwiper" style="margin: 2rem auto; width: 100%; max-width: 1000px; padding-bottom: 50px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects\YAK robot\img\mechanical_arms.jpg" alt="Chippy V3" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects\YAK robot\img\mechanical_arm_module_pic_1.jpg" alt="Chippy Top" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects\YAK robot\img\mechanical_arm_module_pic_2.jpg" alt="Chippy Top" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+      
+          </div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+    <h3 class="nhrl-subheading">Drawing Module</h3>
+    <p class="nhrl-paragraph">
+      The drawing robot module is a model for how STEM activities can use robotics in ways that are both affordable and incorporate creative elements. This module serves as a test for the foundational elements of the YAK robot (attaching components, programming with mBlock, etc.) along with the introduction of creative and open-ended problem solving into a module based on programming and robotics.
+    </p>
+        <div class="swiper mySwiper" style="margin: 2rem auto; width: 100%; max-width: 1000px; padding-bottom: 50px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects/YAK robot/img/drawing_robot.jpg" alt="Chippy V3" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects/YAK robot/img/yak test pic.jpg" alt="Chippy Top" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects\YAK robot\img\drawing_robot_pic_2.jpg" alt="Chippy Top" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+      
+          </div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+    <h3 class="nhrl-subheading">The Youth Academic Kit (YAK)</h3>
+    <p class="nhrl-paragraph">
+      The <strong>Youth Academic Kit (YAK)</strong> serves as a high-performance, low-cost replacement for imported kits. By utilizing locally sourced components, we slashed the price from $400 to <strong>$20 per kit</strong>. The YAK features a modular architecture designed for 3D printing and is programmed through a custom block-based environment that functions entirely offline, ensuring it can be used in the most remote areas of Nepal.
+    </p>
+    
+    <div style="text-align:center; margin: 30px 0;">
+            <img src="/projects/YAK robot/img/IMG_3054.jpg" alt="YAK Assembly" class="nhrl-hero-image" style="border-radius: 8px;">
+    </div>
+
+    <h3 class="nhrl-subheading">Conclusions & Impact</h3>
+    <p class="nhrl-paragraph">
+      The YAK STEM Kit has fundamentally changed the scalability of robotics education in Nepal. Our primary impact was <strong>slashing hardware costs by 95%</strong>, making it economically feasible for public schools to provide kits for every 2-3 students rather than large groups. During our testing, we measured a <strong>significant increase in student engagement</strong>; by providing more kits, students spent less time spectating and more time actively problem-solving.
+    </p>
+    <p class="nhrl-paragraph">
+      By leveraging local supply chains and 3D printing, we created a sustainable ecosystem for OLE Nepal. Moving forward, OLE Nepal plans to use the YAK framework to equip poorer public schools and give students equal access to STEM education.
+    </p>
+
+    <div style="margin-top: 40px;">
+      <img src="/projects/YAK robot/img/group_photo.jpg" alt="Project Group Photo" class="nhrl-hero-image" style="border-radius: 8px;">
+      <p style="font-size:0.85rem; text-align:center; color:#666; margin-top:10px;">The WPI Nepal Project Team 2025.</p>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const menu = document.getElementById('mainMenu');
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > lastScrollY && currentScrollY > 60) {
+            menu.style.transform = 'translateY(-120%)';
+            menu.style.opacity = '0';
+          } else {
+            menu.style.transform = 'translateY(0)';
+            menu.style.opacity = '1';
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+
+    // Swiper Initialization
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      grabCursor: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+  </script>
+</body>
+</html>

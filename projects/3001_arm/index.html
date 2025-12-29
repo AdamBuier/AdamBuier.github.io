@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RBE 3001: Robotic Sorting System | Adam Buier</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body>
+  <nav class="main-menu-overlay" id="mainMenu"
+    style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
+      Adam Buier
+    </a>
+    <div style="display:flex;gap:32px;">
+      <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
+      <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
+      <a href="/resume/" style="color:#fff;text-decoration:none;font-size:1.1rem;">About</a>
+      <a href="/contact/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Contact</a>
+    </div>
+  </nav>
+
+  <figure style="margin:0;height:100%;">
+    <img id="hero-image"
+      src="/projects/3001_arm/img/IMG_2371.jpg" 
+      alt="RBE 3001 Robotic Arm Sorting System"
+      style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+  </figure>
+
+  <div class="nhrl-content">
+    <div class="nhrl-blog-header">
+      <div class="nhrl-published">Unified Robotics III | Final Project</div>  
+      <h1 class="nhrl-title">Vision-Based Pick & Place</h1>
+
+      <div class="nhrl-key-features">
+        <h3 class="nhrl-subheading">Core Competencies</h3>
+        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
+          <li><strong>Kinematics:</strong> Implemented Forward (DH Convention) and Inverse Position Kinematics.</li>
+          <li><strong>Trajectory:</strong> Developed Cubic and Quintic polynomial path generation for smooth motion.</li>
+          <li><strong>Computer Vision:</strong> Created a HSV-based masking pipeline with distortion correction.</li>
+          <li><strong>Velocity Control:</strong> Used Jacobian-based velocity kinematics for task-space movement.</li>
+          <li><strong>System Logic:</strong> Designed a robust state machine to handle sorting and error recovery.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="nhrl-subheading">Overview</h3>
+    <p class="nhrl-paragraph">
+      As part of Unified Robotics III, my team and I developed an autonomous targeting system for a 4-DOF robotic arm. The goal was to detect, identify, and sort colored spheres within a 3D workspace using an integrated overhead camera and mathematical modeling.
+    </p>
+
+    <div style="margin: 40px 0;">
+        <img src="/projects/3001_arm/img/6ZWCP.jpg" alt="DH Table and Axes Diagram" class="nhrl-hero-image" style="border-radius: 8px;">
+        <p style="text-align:center; font-style: italic; color: #666; margin-top: 8px;">Figure 1: Diagram of the axes of motion and the DH Table of the OpenManipulator-X arm.</p>
+    </div>
+
+    <h3 class="nhrl-subheading">Kinematics & Motion Planning</h3>
+    <p class="nhrl-paragraph">
+      The arm's navigation relies on a combination of geometric IK methods and kinematic decoupling. By separating position and orientation calculations, we reduced computational load and increased end-effector accuracy. To avoid the jerky motion common in basic robotic systems, we implemented <strong>Cubic Trajectory Generation</strong>, allowing for fluid transitions between task-space waypoints.
+    </p>
+
+    <h3 class="nhrl-subheading">Computer Vision Pipeline</h3>
+    <p class="nhrl-paragraph">
+      The vision system uses an overhead camera calibrated via MATLAB's Camera Calibration tool. Because the fisheye lens introduces significant distortion, we implemented a <strong>distortion correction algorithm</strong> that uses trigonometry and known constants (camera height and sphere size) to map pixels to real-world coordinates.
+    </p>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0;">
+        <div style="border: 1px solid #eee; border-radius: 8px; padding: 15px;">
+            <img src="/projects/3001_arm/img/color_mask.jpg" alt="HSV Color Masking" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <h4 style="margin-top: 15px; font-weight: 700;">HSV Masking</h4>
+            <p style="font-size: 0.9rem; color: #444;">Thresholding using HSV values to isolate sphere colors regardless of lighting shadows.</p>
+        </div>
+        <div style="border: 1px solid #eee; border-radius: 8px; padding: 15px;">
+            <img src="/projects/3001_arm/img/centriod_detection.jpg" alt="Centroid Detection" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+            <h4 style="margin-top: 15px; font-weight: 700;">Centroid Logic</h4>
+            <p style="font-size: 0.9rem; color: #444;">Pixel-to-coordinate mapping with size filtering to exclude noise from the task space.</p>
+        </div>
+    </div>
+
+    <h3 class="nhrl-subheading">System Architecture</h3>
+    <p class="nhrl-paragraph">
+      The system operates on a <strong>State Machine</strong> architecture. The code separates vision (blocking) from motion (continuous updates). This ensures that once a target is identified and its position stored in the matrix, the arm executes its trajectory without being interrupted by transient visual noise or lighting changes.
+    </p>
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin: 30px 0; background: #000;">
+      <iframe 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        src="https://www.youtube.com/embed/daHTr_eyYLI" 
+        title="RBE 3001 Demo" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h3 class="nhrl-subheading">Results & Conclusion</h3>
+    <p class="nhrl-paragraph">
+      The final implementation successfully demonstrated high-fidelity sorting. The arm consistently identified targets, calculated correct inverse kinematics, and navigated to the appropriate bins. While tested with uniform spheres, the mathematical foundation of this project—specifically the Jacobian-based velocity control—is directly applicable to more advanced industrial robotics.
+    </p>
+
+    <div style="margin-top: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+        <h4 style="font-weight: 700; margin-bottom: 10px;">Project Deliverables</h4>
+        <p style="font-size: 0.9rem;"><a href="https://github.com/WPI-RBE-300n/RBE3001_A25_09/releases/tag/FinalProject" style="color: #007bff;">GitHub Repository</a> | <a href="https://youtu.be/daHTr_eyYLI" style="color: #007bff;">Final Video Presentation</a></p>
+    </div>
+
+  </div>
+
+  <script>
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const menu = document.getElementById('mainMenu');
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > lastScrollY && currentScrollY > 60) {
+            menu.style.transform = 'translateY(-120%)';
+            menu.style.opacity = '0';
+          } else {
+            menu.style.transform = 'translateY(0)';
+            menu.style.opacity = '1';
+          }
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+  </script>
+</body>
+</html>

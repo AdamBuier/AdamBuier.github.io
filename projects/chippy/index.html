@@ -11,6 +11,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <style>
+    /* Carousel Styling */
+    .swiper-slide {
+      opacity: 0.4;
+      transform: scale(0.85);
+      transition: 0.4s cubic-bezier(.4,0,.2,1);
+    }
+    .swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .swiper-pagination-bullet-active {
+      background: #fff !important;
+      width: 24px !important;
+      border-radius: 4px !important;
+    }
+    .nav-btn {
+      color: #fff !important;
+      background: rgba(0,0,0,0.3);
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+    }
+    .nav-btn::after {
+      font-size: 18px !important;
+    }
+  </style>
 </head>
 <body>
     <nav class="main-menu-overlay" id="mainMenu"
@@ -32,112 +60,113 @@
       <div class="nhrl-blog-header">
         <div class="nhrl-published">3lb Combat Robot | April 2024 - Current</div>  
         <h1 class="nhrl-title">Chippy</h1>
-        <div class="swiper mySwiper" style="margin-top: 1rem; max-width: 800px; height: 500px; position: relative;">
+        
+        <div class="swiper mySwiper" style="margin: 2rem auto; width: 100%; max-width: 1000px; padding-bottom: 50px;">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy V3" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" /></div>
-            <div class="swiper-slide"><img src="/blog/April_NHRL_2025/img/April_NHRL_Thumbnail.jpg" alt="Chippy Top" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" /></div>
-            <div class="swiper-slide"><img src="/blog/April_NHRL_2025/img/e0f92ff5-9cb9-4ef8-8763-f26905115669.png" alt="Chippy Top" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" /></div>
-            <div class="swiper-slide"><img src="/projects/chippy/img/2024-10-26 October NHRL WPI raw013.JPG" alt="Chippy Side" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" /></div>
-            <div class="swiper-slide"><img src="/projects/chippy/img/IMG_7442.JPG" alt="Chippy Top" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" /></div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects/chippy/img/ChippyV3Pic.jpg" alt="Chippy V3" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/blog/April_NHRL_2025/img/April_NHRL_Thumbnail.jpg" alt="Chippy Top" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/blog/April_NHRL_2025/img/e0f92ff5-9cb9-4ef8-8763-f26905115669.png" alt="Chippy Top" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects/chippy/img/2024-10-26 October NHRL WPI raw013.JPG" alt="Chippy Side" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
+            <div class="swiper-slide" style="width: 80%;">
+                <img src="/projects/chippy/img/IMG_7442.JPG" alt="Chippy Top" style="width:100%; height:500px; object-fit:cover; border-radius:12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" />
+            </div>
           </div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-button-next nav-btn"></div>
           <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev" style="color:white;"></div>
-          <div class="swiper-button-next" style="color:white;"></div>
         </div>
 
-  
-    <div class="nhrl-key-features">
-      <h3 class="nhrl-subheading">Stats</h3>
-      <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
-        <li>Weight: 3 lbs (Beetleweight class)</li>
-        <li>Weapon: 4.5″ AR600 steel blade, 400 MPH</li>
-        <li>Materials: Steel, TPU, UHMW, Carbon Fiber, Aluminum</li>
-        <li>Record: 8-2</li>
-      </ul>
-    </div>
-  </div>
+        <div class="nhrl-key-features">
+          <h3 class="nhrl-subheading">Stats</h3>
+          <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
+            <li>Weight: 3 lbs (Beetleweight class)</li>
+            <li>Weapon: 4.5″ AR600 steel blade, 400 MPH</li>
+            <li>Materials: Steel, TPU, UHMW, Carbon Fiber, Aluminum</li>
+            <li>Record: 8-2</li>
+          </ul>
+        </div>
+      </div>
 
-  <section class="nhrl-paragraph prose max-w-none">
-    <h3 class="nhrl-subheading">Overview</h3>
-    <p>Chippy is a 3 lb hammersaw–style BattleBot built to strike and pierce opposing robots using a spinning saw blade mounted on an articulating arm. Designed and first built in January 2024, Chippy emphasizes energy absorption, aggressive undercutting with steel forks, and modular iteration. It has competed in the NHRL (National Havoc Robot League) twice.</p>
+      <section class="nhrl-paragraph prose max-w-none">
+        <h3 class="nhrl-subheading">Overview</h3>
+        <p>Chippy is a 3 lb hammersaw–style BattleBot built to strike and pierce opposing robots using a spinning saw blade mounted on an articulating arm. Designed and first built in January 2024, Chippy emphasizes energy absorption, aggressive undercutting with steel forks, and modular iteration. It has competed in the NHRL (National Havoc Robot League) twice.</p>
 
-
-    <h3 class="nhrl-subheading">Weapon System</h3>
-    <p>Chippy’s weapon is a 4.5″ AR600 blade driven by a through-bolted RDY-MINI-5022-V2 hub motor that spins at 400 mph; the hub mounts to a UHMW arm with a 3:1 gear reduction that converts the motor’s rotation into a swinging strike.</p>
+        <h3 class="nhrl-subheading">Weapon System</h3>
+        <p>Chippy’s weapon is a 4.5″ AR600 blade driven by a through-bolted RDY-MINI-5022-V2 hub motor that spins at 400 mph; the hub mounts to a UHMW arm with a 3:1 gear reduction that converts the motor’s rotation into a swinging strike.</p>
+        
         <div>
-            <img src="\projects\chippy\img\arm.png" alt="Chippy vs Katana" class="nhrl-hero-image">
+            <img src="/projects/chippy/img/arm.png" alt="Chippy Arm Mechanism" class="nhrl-hero-image">
         </div>
-    <h3 class="nhrl-subheading">Armor</h3>
-    <p>A defining feature of Chippy is its configurable armor system: the outer shell and front forks can be swapped or reshaped depending on the opponent. That lets me tune fork geometry and material, or change armor thickness and layout, to give Chippy an advantage.</p>
 
-    <!-- Armor configs grid: centered, uniform thumbnail sizes -->
-    <div class="armor-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:960px;margin:1rem auto 0;align-items:start;justify-items:center;">
-      <figure style="margin:0;width:100%;">
-        <img src="/projects/chippy/img/Screenshot%202025-06-18%20142142.png" alt="Vertical Spinner Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
-        <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Vertical Spinner Config</figcaption>
-      </figure>
+        <h3 class="nhrl-subheading">Armor</h3>
+        <p>A defining feature of Chippy is its configurable armor system: the outer shell and front forks can be swapped or reshaped depending on the opponent. That lets me tune fork geometry and material, or change armor thickness and layout, to give Chippy an advantage.</p>
 
-      <figure style="margin:0;width:100%;">
-        <img src="/projects/chippy/img/horizontal_config.png" alt="Horizontal Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
-        <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Horizontal Config</figcaption>
-      </figure>
+        <div class="armor-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:960px;margin:1rem auto 0;align-items:start;justify-items:center;">
+          <figure style="margin:0;width:100%;">
+            <img src="/projects/chippy/img/Screenshot 2025-06-18 142142.png" alt="Vertical Spinner Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
+            <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Vertical Spinner Config</figcaption>
+          </figure>
+          <figure style="margin:0;width:100%;">
+            <img src="/projects/chippy/img/horizontal_config.png" alt="Horizontal Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
+            <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Horizontal Config</figcaption>
+          </figure>
+          <figure style="margin:0;width:100%;">
+            <img src="/projects/chippy/img/Screenshot 2025-06-18 180933.png" alt="Control Bot Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
+            <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Control Bot Config</figcaption>
+          </figure>
+          <figure style="margin:0;width:100%;">
+            <img src="/projects/chippy/img/Beater_Bar_config.png" alt="Beater Bar Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
+            <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Beater Bar Config</figcaption>
+          </figure>
+          <figure style="margin:0;width:100%;">
+            <img src="/projects/chippy/img/Hammersaw_config.png" alt="Hammersaw Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
+            <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Hammersaw Config</figcaption>
+          </figure>
+          <figure style="margin:0;width:100%;">
+            <img src="/projects/chippy/img/Screenshot 2025-06-18 234509.png" alt="Big Wheel Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
+            <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Big Wheel Config</figcaption>
+          </figure>
+        </div>
 
-      <figure style="margin:0;width:100%;">
-        <img src="/projects/chippy/img/Screenshot%202025-06-18%20180933.png" alt="Control Bot Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
-        <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Control Bot Config</figcaption>
-      </figure>
+        <h3 class="nhrl-subheading">Versions & Iterations</h3>
+        <div class="versions-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:980px;margin:1rem auto;">
+          <article style="background:transparent;padding:8px;border-radius:8px;text-align:center;">
+            <img src="/projects/chippy/img/chippy_v1.png" alt="V1 Thumbnail" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;margin-bottom:8px;" />
+            <h4 style="margin:0 0 6px 0;font-size:1rem;">V1 — Apr 2024</h4>
+            <p style="margin:0;font-size:0.95rem;color:#555;">Weapon arm lacked torque and couldn’t reliably flip or recover.</p>
+          </article>
+          <article style="background:transparent;padding:8px;border-radius:8px;text-align:center;">
+            <img src="/projects/chippy/img/IMG_9882.jpg" alt="V2 Thumbnail" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;margin-bottom:8px;" />
+            <h4 style="margin:0 0 6px 0;font-size:1rem;">V2 — Oct 2024</h4>
+            <p style="margin:0;font-size:0.95rem;color:#555;">Redesigned forks and increased arm gear ratio for consistent strikes.</p>
+          </article>
+          <article style="background:transparent;padding:8px;border-radius:8px;text-align:center;">
+            <img src="/projects/chippy/img/ChippyV3Pic.jpg" alt="V3 Thumbnail" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;margin-bottom:8px;" />
+            <h4 style="margin:0 0 6px 0;font-size:1rem;">V3 — Apr 2025</h4>
+            <p style="margin:0;font-size:0.95rem;color:#555;">Refined geometry and layout for durability and faster repairs.</p>
+          </article>
+        </div>
 
-      <figure style="margin:0;width:100%;">
-        <img src="/projects/chippy/img/Beater_Bar_config.png" alt="Beater Bar Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
-        <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Beater Bar Config</figcaption>
-      </figure>
-
-      <figure style="margin:0;width:100%;">
-        <img src="/projects/chippy/img/Hammersaw_config.png" alt="Hammersaw Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
-        <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Hammersaw Config</figcaption>
-      </figure>
-
-      <figure style="margin:0;width:100%;">
-        <img src="/projects/chippy/img/Screenshot%202025-06-18%20234509.png" alt="Big Wheel Config" style="width:100%;height:180px;object-fit:cover;border-radius:8px;display:block;" />
-        <figcaption style="text-align:center;font-size:0.9rem;margin-top:6px;">Big Wheel Config</figcaption>
-      </figure>
+        <h3 class="nhrl-subheading">Future Plans</h3>
+        <p>Chippy is currently going through a 3.1 design iteration and will hopefully compete next in early 2026.</p>
+      </section>
     </div>
 
-    <h3 class="nhrl-subheading">Versions & Iterations</h3>
-    <!-- Versions grid: 3 columns with thumbnail, title, and description -->
-    <div class="versions-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:980px;margin:1rem auto;">
-      <article style="background:transparent;padding:8px;border-radius:8px;text-align:center;">
-        <img src="/projects/chippy/img/chippy_v1.png" alt="V1 Thumbnail" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;margin-bottom:8px;" />
-        <h4 style="margin:0 0 6px 0;font-size:1rem;">V1 — Apr 2024</h4>
-        <p style="margin:0;font-size:0.95rem;color:var(--muted,#555);">Weapon arm lacked torque and couldn’t reliably flip or recover when it became stuck.</p>
-      </article>
-
-      <article style="background:transparent;padding:8px;border-radius:8px;text-align:center;">
-        <img src="/projects/chippy/img/IMG_9882.jpg" alt="V2 Thumbnail" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;margin-bottom:8px;" />
-        <h4 style="margin:0 0 6px 0;font-size:1rem;">V2 — Oct 2024</h4>
-        <p style="margin:0;font-size:0.95rem;color:var(--muted,#555);">Redesigned the forks and armor to get under opponents better and increased the arm gear ratio to provide the torque needed for consistent strikes</p>
-      </article>
-
-      <article style="background:transparent;padding:8px;border-radius:8px;text-align:center;">
-        <img src="/projects/chippy/img/ChippyV3Pic.jpg" alt="V3 Thumbnail" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;margin-bottom:8px;" />
-        <h4 style="margin:0 0 6px 0;font-size:1rem;">V3 — Apr 2025</h4>
-        <p style="margin:0;font-size:0.95rem;color:var(--muted,#555);">Refined weapon geometry and optimized the overall layout for durability, weight distribution, and faster pit repairs.</p>
-      </article>
-    </div>
-
-    <h3 class="nhrl-subheading">Future Plans</h3>
-    <p>Chippy is currently going through a 3.1 design iteration and will hopefully compete next in early 2026.</p>
-
-
-  </section>
-
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      // Scroll logic
       let lastScrollY = window.scrollY;
       let ticking = false;
       const menu = document.getElementById('mainMenu');
-      function onScroll() {
+      window.addEventListener('scroll', () => {
         if (!ticking) {
           window.requestAnimationFrame(() => {
             const currentScrollY = window.scrollY;
@@ -153,16 +182,19 @@
           });
           ticking = true;
         }
-      }
-      window.addEventListener('scroll', onScroll);
-    </script>
+      });
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
+      // Swiper logic
       const swiper = new Swiper('.mySwiper', {
         loop: true,
-        spaceBetween: 16,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -171,10 +203,7 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        slidesPerView: 1,
       });
     </script>
-
-  </body>
-  </html>
-        nextEl: ".swiper-button-next",
+</body>
+</html>

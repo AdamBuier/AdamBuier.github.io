@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Combat Robotics Digital Twin | Adam Buier</title>
 
-  <!-- Match fonts and styles -->
-  <link rel="stylesheet" href="/css/styles.css"> <!-- Link to your provided CSS file -->
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link
     rel="stylesheet"
@@ -15,18 +14,33 @@
     href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900"
   />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calcom/font-calsans@1.0.0/dist/calsans.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <style>
+    /* Carousel Styling */
+    .swiper-slide { opacity: 0.4; transform: scale(0.85); transition: 0.4s cubic-bezier(.4,0,.2,1); }
+    .swiper-slide-active { opacity: 1; transform: scale(1); }
+    .swiper-pagination-bullet-active { background: #fff !important; width: 24px !important; border-radius: 4px !important; }
+    .nav-btn { color: #fff !important; background: rgba(0,0,0,0.3); width: 40px !important; height: 40px !important; border-radius: 50%; }
+    .nav-btn::after { font-size: 18px !important; }
+
+    /* Related Blog Posts - Matching Blog Index Style */
+    .related-posts-section { margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee; }
+    .blog-featured-image-wrapper { position: relative; width: 100%; max-width: 600px; aspect-ratio: 16/9; cursor: pointer; transition: transform 0.18s cubic-bezier(.4,0,.2,1); }
+    .blog-featured-image-wrapper:active { transform: translateX(12px) scale(0.97); }
+    .blog-featured-image { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; border: 4px solid #232323; box-sizing: border-box; }
+    .blog-featured-border { position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-top: 10px solid #5be147; border-right: 10px solid #2a3cff; border-bottom: 10px solid #ffe14d; border-left: 10px solid #e14de1; border-radius: 18px; z-index: -1; }
+    .blog-featured-title { font-family: 'Cal Sans', sans-serif; font-size: 2.2rem; font-weight: 700; color: #111; margin: 15px 0; line-height: 1.1; }
+    .blog-featured-link { display: flex; align-items: center; gap: 8px; font-family: 'Cal Sans', sans-serif; font-weight: 700; color: #111; text-decoration: none; transition: color 0.2s; }
+    .blog-featured-link:hover { color: #2a3cff; }
+  </style>
 </head>
-<!-- HEAD remains unchanged -->
-<!-- BODY -->
+
 <body>
-  <!-- Header Navigation -->
   <nav class="main-menu-overlay" id="mainMenu"
     style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:28px 60px;background:rgba(0,0,0,0.38);backdrop-filter:blur(2px);transition:transform 0.5s cubic-bezier(.4,0,.2,1), opacity 0.5s cubic-bezier(.4,0,.2,1);">
-    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">
-      Adam Buier
-    </a>
+    <a href="/" style="font-size:2rem;font-weight:700;color:#fff;letter-spacing:2px;text-decoration:none;font-family:'Cal Sans',sans-serif;">Adam Buier</a>
     <div style="display:flex;gap:32px;">
       <a href="/projects/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Projects</a>
       <a href="/blog/" style="color:#fff;text-decoration:none;font-size:1.1rem;">Blog</a>
@@ -35,67 +49,96 @@
     </div>
   </nav>
 
-  <!-- Hero Image -->
   <figure style="margin:0;height:100%;">
-    <img id="hero-image"
-      src="/projects\combat_digital_twin\img\cr_digital_twin_thumbnail.png"
-      alt="Walker robot"
-      style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;transition:0.3s;">
+    <img id="hero-image" src="/projects/combat_digital_twin/img/Screenshot 2025-07-17 222009a.png" alt="Isaac Sim" style="object-fit:cover;width:100%;height:100%;max-height:600px;display:block;">
   </figure>
 
-  <!-- Main Content -->
   <div class="nhrl-content">
     <div class="nhrl-blog-header">
       <div class="nhrl-published">June 2025 - Current</div>  
       <h1 class="nhrl-title">Combat Robotics Digital Twin</h1>
-      <div class="swiper mySwiper" style="margin-top: 1rem; max-width: 800px; height: 500px; position: relative;">
+      
+      <div class="swiper mySwiper" style="margin: 2rem auto; width: 100%; max-width: 1000px; padding-bottom: 50px;">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="/projects\combat_digital_twin\img\Screenshot 2025-07-13 130119.png" alt="Chippy Top"
-                style="width:100%; height:100%; object-fit:cover; border-radius: 12px;" />
-          </div>
+          <div class="swiper-slide" style="width: 80%;"><img src="/projects/combat_digital_twin/img/cr_digital_twin_thumbnail.png" class="blog-featured-image" style="height:500px;" /></div>
+          <div class="swiper-slide" style="width: 80%;"><img src="/projects/combat_digital_twin/img/Screenshot 2025-07-15 214751.png" class="blog-featured-image" style="height:500px;" /></div>
+          <div class="swiper-slide" style="width: 80%;"><img src="/projects/combat_digital_twin/img/Screenshot 2025-08-05 013558.png" class="blog-featured-image" style="height:500px;" /></div>
+          <div class="swiper-slide" style="width: 80%;"><img src="/projects\combat_digital_twin\img\Screenshot 2025-08-11 223904.png" class="blog-featured-image" style="height:500px;" /></div>
+          <div class="swiper-slide" style="width: 80%;"><img src="/projects\combat_digital_twin\img\Screenshot 2025-07-13 130119.png" class="blog-featured-image" style="height:500px;" /></div>
         </div>
-
-        <!-- Pagination and Arrows -->
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-button-next nav-btn"></div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev" style="color:white;"></div>
-        <div class="swiper-button-next" style="color:white;"></div>
-      </div>
-      <div class="nhrl-key-features">
-        <h3 class="nhrl-subheading">Highlights</h3>
-        <ul class="nhrl-list" style="list-style-type: disc; padding-left: 20px;">
-          <li>Designed and built a legged robot</li>
-          <li>Custom CAD modeled with kinematics calculated in MATLAB</li>
-          <li>Used brushless motors with Arduino-based control</li>
-          <li>Built and tested early prototypes using 3D-printed parts</li>
-          <li>Troubleshot motor PWM control due to lack of documentation</li>
-          <li>Learned about mechanical failure and design limitations through real-world testing</li>
-        </ul>
       </div>
     </div>
+        <h3 class="nhrl-subheading">Overview</h3>
+        <p class="nhrl-paragraph">The backbone of this digital twin is NVIDIA IsaacSim, a robotics simulation platform built on the Omniverse ecosystem. While traditional CAD allows for static design, Isaac Sim utilizes the PhysX 5 engine to deliver hardware accelerated, real-time physics and high-fidelity GPU-based ray tracing. I developed this environment specifically to bridge the gap between "perfect" designs and the chaotic reality of the arena for my robot, Chippy. By importing Chippy's URDF model into this workspace, I can perform complex "What If" scenarios—testing drive, weapon torque, and structural integrity without having to physically build the robot. This turns unpredictable combat into a data-driven engineering challenge, allowing me to iterate on Chippy’s geometry and performance in a photorealistic, physics-accurate sandbox.</p>
 
-    <h3 class="nhrl-subheading">Overview</h3>
+    <h2 class="nhrl-subheading" style="font-size: 2.5rem; margin-top: 40px;">System Capabilities</h2>
+
+    <h3 class="nhrl-subheading">Impact & Collision Simulations</h3>
     <p class="nhrl-paragraph">
-      I had the idea of building a walker after taking RBE 2002, where we used sensors to make a robot autonomously collect and deliver trash. I joked, “Imagine if the robot had legs,” and the idea stuck. During the final week of the semester, I decided to bring the idea to life using electronics I had on hand and an Arduino Leonardo I borrowed from my professor.
-    </p>
+I utilize high-fidelity physics to simulate weapon-to-robot impacts, allowing me to rigorously test and optimize components for maximum engagement efficiency. Traditionally, gathering this data requires entering a tournament and hoping to be paired against a specific robot archetype an expensive process that often yields only a single fight's worth of information. The simulation environment removes this limitation, enabling dozens of iterative battles and design tweaks without the cost of physical fabrication. A clear example of this is seen in the videos below: initially, a vertical spinner striking my forks would send my robot flying, but by decreasing the fork angle in the sim, I was able to find a geometry that wins that same engagement and keeps the bot grounded.    </p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0;">
+      <video controls class="blog-featured-image" style="width:100%;">
+        <source src="/projects\combat_digital_twin\img\chippy_beaterbar_vert_forks test_2 - Made with Clipchamp.mp4" type="video/mp4">
+      </video>
+      <video controls class="blog-featured-image" style="width:100%;">
+        <source src="/projects/combat_digital_twin/img/chippy_beaterbar_vert_forks test_4 - Made with Clipchamp.mp4" type="video/mp4">
+      </video>
+    </div>
 
-    <h3 class="nhrl-subheading">Design</h3>
+    <h3 class="nhrl-subheading">Traction & Drive Optimization</h3>
     <p class="nhrl-paragraph">
-      The walker design was inspired by a combat robot called <a href="https://wiki.nhrl.io/wiki/index.php/Pawsitively_Hissterical" target="_blank" rel="noopener noreferrer" class="link">
-                Pawsitively Hissterical
-            </a>, which uses a single motor and a system of linkages to drive its legs. Based on that idea, I created a custom version in CAD and used two brushless <a href="https://repeat-robotics.com/buy/repeat-compact-1806/" target="_blank" rel="noopener noreferrer" class="link">
-                Repeat Compact motors
-            </a>I had available. The motors were controlled by speed controllers hooked up to an Arduino Leonardo, which included an onboard IMU, gyroscope, accelerometer, and a line sensor. I validated the linkage motion in MATLAB before completing the design in Onshape.
+      The sim is perfect for moving beyond "vibes-based" drive design. I recently used it to help <strong>Emburn</strong>, a beetleweight multi-bot, resolve traction issues. By simulating its long chassis with different wheel diameters and positions, we confirmed that a 4WD setup would provide the necessary pushing power and stability, eliminating the guesswork of its original 2WD design.
     </p>
-    <img src="/projects\combat_digital_twin\img\Screenshot 2025-07-20 163212.png" alt="Walker CAD" class="nhrl-hero-image">
+    <video controls class="nhrl-hero-image" preload="metadata">
+      <source src="/blog\combat_sim\emburn_drive_test\img\emburn_drive_test_1_edited.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3 class="nhrl-subheading">Dynamic Arm Force Analysis</h3>
+    <p class="nhrl-paragraph">
+Operating a heavy weapon arm changes the robot's center of mass and handling. Within the digital twin, I can see exactly how the forces of the arm effect the robot's movement and see if the robot arm has enough torque to selfright the robot    </p>
+    <video controls class="nhrl-hero-image" preload="metadata">
+      <source src="/projects\combat_digital_twin\img\Chippy selfrighting sim - Made with Clipchamp.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+<h3 class="nhrl-subheading">Current Developments</h3>
+    <p class="nhrl-paragraph">
+      While the simulation is already a powerful tool for validation, I am actively working on expanding its capabilities:
+    </p>
+    <ul class="nhrl-paragraph" style="list-style-type: disc; margin-left: 2rem; margin-bottom: 2rem;">
+      <li style="margin-bottom: 10px;"><strong>Impact Mapping:</strong> Systematically mapping out the hit-zones for Chippy’s arm against various robot archetypes.</li>
+      <li style="margin-bottom: 10px;"><strong>AI Opponent Integration:</strong> Developing an AI-driven opponent to create an unpredictable testing environment.</li>
+      <li style="margin-bottom: 10px;"><strong>Transmitter Integration:</strong> Creating a bridge to allow control via a standard RC transmitter for driving practice.</li>
+    </ul>
 
-    
+    <section class="related-posts-section">
+      <h3 class="nhrl-subheading">Related Blog Post</h3>
+      <div class="related-grid" style="max-width: 600px;">
+        <div class="blog-featured">
+          <div class="blog-featured-image-wrapper">
+            <a href="/blog/combat_sim/emburn_drive_test/">
+              <img src="/blog/combat_sim/emburn_drive_test/img/Screenshot 2025-08-05 235647.png" alt="Emburn Test" class="blog-featured-image">
+              <div class="blog-featured-border"></div>
+            </a>
+          </div>
+          <div class="blog-featured-title">Emburn Drive Simulation</div>
+          <a href="/blog/combat_sim/emburn_drive_test/" class="blog-featured-link">
+            <svg width="24" height="24" fill="none" viewBox="0 0 32 32"><path d="M5 16h22M17 8l10 8-10 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            READ MORE
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
- <script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
     let lastScrollY = window.scrollY;
     let ticking = false;
     const menu = document.getElementById('mainMenu');
-    function onScroll() {
+    window.addEventListener('scroll', () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
@@ -111,27 +154,18 @@
         });
         ticking = true;
       }
-    }
-    window.addEventListener('scroll', onScroll);
-  </script>
+    });
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper('.mySwiper', {
       loop: true,
-      spaceBetween: 16,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      slidesPerView: 1,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      grabCursor: true,
+      autoplay: { delay: 4000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     });
   </script>
 </body>
-
 </html>
